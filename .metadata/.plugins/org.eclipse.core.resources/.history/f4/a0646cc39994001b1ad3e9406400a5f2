@@ -136,7 +136,7 @@ public class GitRepositoryAnalysisTools {
          			int k = -nearestLinesNumber;
          			while(k <= lineNum + nearestLinesNumber)
          			{
-         				if(k > 0 & k <= length)
+         				if(k > 0)
          				{
          					if (d.before(br.getSourceCommitter(k).getWhen()))
              				{
