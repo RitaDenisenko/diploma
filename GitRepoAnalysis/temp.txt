@@ -1,0 +1,2027 @@
+diff --git a/appveyor.yml b/appveyor.yml
+index 264794f..d34f678 100644
+--- a/appveyor.yml
++++ b/appveyor.yml
+@@ -102,15 +102,11 @@
+       platform: Win32
+       configuration: Debug
+ 
+-# This build causes error after 30 minutes, because the VS2017 image
+-# tries to launch just-in-time debugger on call to std::terminate, which
+-# is an expected part of the tests in this build.
+-# We can reenable it, if we handle disabling that test in CMake.
+-#    - FLAVOR: VS 2017 Win32 Debug Examples
+-#      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+-#      examples: 1
+-#      platform: Win32
+-#      configuration: Debug
++    - FLAVOR: VS 2017 Win32 Debug Examples
++      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
++      examples: 1
++      platform: Win32
++      configuration: Debug
+ 
+     - FLAVOR: VS 2017 Win32 Debug WMain
+       APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+diff --git a/tools/scripts/approvalTests.py b/tools/scripts/approvalTests.py
+index faedce7..f8b9425 100755
+--- a/tools/scripts/approvalTests.py
++++ b/tools/scripts/approvalTests.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from __future__ import print_function
+ 
+diff --git a/tools/scripts/approve.py b/tools/scripts/approve.py
+index 252d08e..997b8c7 100755
+--- a/tools/scripts/approve.py
++++ b/tools/scripts/approve.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ 
+diff --git a/tools/scripts/benchmarkCompile.py b/tools/scripts/benchmarkCompile.py
+index 586c26a..34113b9 100755
+--- a/tools/scripts/benchmarkCompile.py
++++ b/tools/scripts/benchmarkCompile.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from __future__ import print_function
+ 
+diff --git a/tools/scripts/developBuild.py b/tools/scripts/developBuild.py
+index a8115fe..9252c7d 100755
+--- a/tools/scripts/developBuild.py
++++ b/tools/scripts/developBuild.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import releaseCommon
+diff --git a/tools/scripts/embedClara.py b/tools/scripts/embedClara.py
+index 7ceb3e3..d8c1520 100755
+--- a/tools/scripts/embedClara.py
++++ b/tools/scripts/embedClara.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ # Execute this script any time you import a new copy of Clara into the third_party area
+ import os
+diff --git a/tools/scripts/extractFeaturesFromReleaseNotes.py b/tools/scripts/extractFeaturesFromReleaseNotes.py
+index 090f477..11f4955 100644
+--- a/tools/scripts/extractFeaturesFromReleaseNotes.py
++++ b/tools/scripts/extractFeaturesFromReleaseNotes.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ #
+ # extractFeaturesFromReleaseNotes.py
+diff --git a/tools/scripts/fixWhitespace.py b/tools/scripts/fixWhitespace.py
+index bfa4aa0..4591c1c 100755
+--- a/tools/scripts/fixWhitespace.py
++++ b/tools/scripts/fixWhitespace.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import os
+diff --git a/tools/scripts/generateSingleHeader.py b/tools/scripts/generateSingleHeader.py
+index f896877..0de1a63 100755
+--- a/tools/scripts/generateSingleHeader.py
++++ b/tools/scripts/generateSingleHeader.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from __future__ import print_function
+ 
+diff --git a/tools/scripts/majorRelease.py b/tools/scripts/majorRelease.py
+index 8da3406..e9e285a 100755
+--- a/tools/scripts/majorRelease.py
++++ b/tools/scripts/majorRelease.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import releaseCommon
+diff --git a/tools/scripts/minorRelease.py b/tools/scripts/minorRelease.py
+index 6e71cd8..2b57c2e 100755
+--- a/tools/scripts/minorRelease.py
++++ b/tools/scripts/minorRelease.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import releaseCommon
+diff --git a/tools/scripts/patchRelease.py b/tools/scripts/patchRelease.py
+index 1417642..d20db71 100755
+--- a/tools/scripts/patchRelease.py
++++ b/tools/scripts/patchRelease.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import releaseCommon
+diff --git a/tools/scripts/releaseNotes.py b/tools/scripts/releaseNotes.py
+index 5e770bb..7f580e9 100755
+--- a/tools/scripts/releaseNotes.py
++++ b/tools/scripts/releaseNotes.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from __future__ import print_function
+ 
+diff --git a/tools/scripts/updateDocumentToC.py b/tools/scripts/updateDocumentToC.py
+index 325c8a3..41b4875 100644
+--- a/tools/scripts/updateDocumentToC.py
++++ b/tools/scripts/updateDocumentToC.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ #
+ # updateDocumentToC.py
+diff --git a/tools/scripts/updateWandbox.py b/tools/scripts/updateWandbox.py
+index fa25ef1..3668da5 100644
+--- a/tools/scripts/updateWandbox.py
++++ b/tools/scripts/updateWandbox.py
+@@ -3,10 +3,14 @@
+ import json
+ import os
+ import urllib.request
++import urllib.parse
++
+ 
+ from scriptCommon import catchPath
+ 
+ def upload(options):
++#    request_blah = urllib.request.Request('https://
++
+     request = urllib.request.Request('https://melpon.org/wandbox/api/compile.json', method='POST')
+     json_bytes = json.dumps(options).encode('utf-8')
+     request.add_header('Content-Type', 'application/json; charset=utf-8')
+diff --git a/tools/scripts/approvalTests.py b/tools/scripts/approvalTests.py
+index faedce7..f8b9425 100755
+--- a/tools/scripts/approvalTests.py
++++ b/tools/scripts/approvalTests.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from __future__ import print_function
+ 
+diff --git a/tools/scripts/approve.py b/tools/scripts/approve.py
+index 252d08e..997b8c7 100755
+--- a/tools/scripts/approve.py
++++ b/tools/scripts/approve.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ 
+diff --git a/tools/scripts/benchmarkCompile.py b/tools/scripts/benchmarkCompile.py
+index 586c26a..34113b9 100755
+--- a/tools/scripts/benchmarkCompile.py
++++ b/tools/scripts/benchmarkCompile.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from __future__ import print_function
+ 
+diff --git a/tools/scripts/developBuild.py b/tools/scripts/developBuild.py
+index a8115fe..9252c7d 100755
+--- a/tools/scripts/developBuild.py
++++ b/tools/scripts/developBuild.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import releaseCommon
+diff --git a/tools/scripts/embedClara.py b/tools/scripts/embedClara.py
+index 7ceb3e3..d8c1520 100755
+--- a/tools/scripts/embedClara.py
++++ b/tools/scripts/embedClara.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ # Execute this script any time you import a new copy of Clara into the third_party area
+ import os
+diff --git a/tools/scripts/extractFeaturesFromReleaseNotes.py b/tools/scripts/extractFeaturesFromReleaseNotes.py
+index 090f477..11f4955 100644
+--- a/tools/scripts/extractFeaturesFromReleaseNotes.py
++++ b/tools/scripts/extractFeaturesFromReleaseNotes.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ #
+ # extractFeaturesFromReleaseNotes.py
+diff --git a/tools/scripts/fixWhitespace.py b/tools/scripts/fixWhitespace.py
+index bfa4aa0..4591c1c 100755
+--- a/tools/scripts/fixWhitespace.py
++++ b/tools/scripts/fixWhitespace.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import os
+diff --git a/tools/scripts/generateSingleHeader.py b/tools/scripts/generateSingleHeader.py
+index f896877..0de1a63 100755
+--- a/tools/scripts/generateSingleHeader.py
++++ b/tools/scripts/generateSingleHeader.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from __future__ import print_function
+ 
+diff --git a/tools/scripts/majorRelease.py b/tools/scripts/majorRelease.py
+index 8da3406..e9e285a 100755
+--- a/tools/scripts/majorRelease.py
++++ b/tools/scripts/majorRelease.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import releaseCommon
+diff --git a/tools/scripts/minorRelease.py b/tools/scripts/minorRelease.py
+index 6e71cd8..2b57c2e 100755
+--- a/tools/scripts/minorRelease.py
++++ b/tools/scripts/minorRelease.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import releaseCommon
+diff --git a/tools/scripts/patchRelease.py b/tools/scripts/patchRelease.py
+index 1417642..d20db71 100755
+--- a/tools/scripts/patchRelease.py
++++ b/tools/scripts/patchRelease.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import releaseCommon
+diff --git a/tools/scripts/releaseNotes.py b/tools/scripts/releaseNotes.py
+index 5e770bb..7f580e9 100755
+--- a/tools/scripts/releaseNotes.py
++++ b/tools/scripts/releaseNotes.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from __future__ import print_function
+ 
+diff --git a/tools/scripts/updateDocumentToC.py b/tools/scripts/updateDocumentToC.py
+index 325c8a3..41b4875 100644
+--- a/tools/scripts/updateDocumentToC.py
++++ b/tools/scripts/updateDocumentToC.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ #
+ # updateDocumentToC.py
+diff --git a/tools/scripts/updateWandbox.py b/tools/scripts/updateWandbox.py
+index fa25ef1..3668da5 100644
+--- a/tools/scripts/updateWandbox.py
++++ b/tools/scripts/updateWandbox.py
+@@ -3,10 +3,14 @@
+ import json
+ import os
+ import urllib.request
++import urllib.parse
++
+ 
+ from scriptCommon import catchPath
+ 
+ def upload(options):
++#    request_blah = urllib.request.Request('https://
++
+     request = urllib.request.Request('https://melpon.org/wandbox/api/compile.json', method='POST')
+     json_bytes = json.dumps(options).encode('utf-8')
+     request.add_header('Content-Type', 'application/json; charset=utf-8')
+diff --git a/tools/scripts/approvalTests.py b/tools/scripts/approvalTests.py
+index faedce7..f8b9425 100755
+--- a/tools/scripts/approvalTests.py
++++ b/tools/scripts/approvalTests.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from __future__ import print_function
+ 
+diff --git a/tools/scripts/approve.py b/tools/scripts/approve.py
+index 252d08e..997b8c7 100755
+--- a/tools/scripts/approve.py
++++ b/tools/scripts/approve.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ 
+diff --git a/tools/scripts/benchmarkCompile.py b/tools/scripts/benchmarkCompile.py
+index 586c26a..34113b9 100755
+--- a/tools/scripts/benchmarkCompile.py
++++ b/tools/scripts/benchmarkCompile.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from __future__ import print_function
+ 
+diff --git a/tools/scripts/developBuild.py b/tools/scripts/developBuild.py
+index a8115fe..9252c7d 100755
+--- a/tools/scripts/developBuild.py
++++ b/tools/scripts/developBuild.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import releaseCommon
+diff --git a/tools/scripts/embedClara.py b/tools/scripts/embedClara.py
+index 7ceb3e3..d8c1520 100755
+--- a/tools/scripts/embedClara.py
++++ b/tools/scripts/embedClara.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ # Execute this script any time you import a new copy of Clara into the third_party area
+ import os
+diff --git a/tools/scripts/extractFeaturesFromReleaseNotes.py b/tools/scripts/extractFeaturesFromReleaseNotes.py
+index 090f477..11f4955 100644
+--- a/tools/scripts/extractFeaturesFromReleaseNotes.py
++++ b/tools/scripts/extractFeaturesFromReleaseNotes.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ #
+ # extractFeaturesFromReleaseNotes.py
+diff --git a/tools/scripts/fixWhitespace.py b/tools/scripts/fixWhitespace.py
+index bfa4aa0..4591c1c 100755
+--- a/tools/scripts/fixWhitespace.py
++++ b/tools/scripts/fixWhitespace.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import os
+diff --git a/tools/scripts/generateSingleHeader.py b/tools/scripts/generateSingleHeader.py
+index f896877..0de1a63 100755
+--- a/tools/scripts/generateSingleHeader.py
++++ b/tools/scripts/generateSingleHeader.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from __future__ import print_function
+ 
+diff --git a/tools/scripts/majorRelease.py b/tools/scripts/majorRelease.py
+index 8da3406..e9e285a 100755
+--- a/tools/scripts/majorRelease.py
++++ b/tools/scripts/majorRelease.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import releaseCommon
+diff --git a/tools/scripts/minorRelease.py b/tools/scripts/minorRelease.py
+index 6e71cd8..2b57c2e 100755
+--- a/tools/scripts/minorRelease.py
++++ b/tools/scripts/minorRelease.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import releaseCommon
+diff --git a/tools/scripts/patchRelease.py b/tools/scripts/patchRelease.py
+index 1417642..d20db71 100755
+--- a/tools/scripts/patchRelease.py
++++ b/tools/scripts/patchRelease.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import releaseCommon
+diff --git a/tools/scripts/releaseNotes.py b/tools/scripts/releaseNotes.py
+index 5e770bb..7f580e9 100755
+--- a/tools/scripts/releaseNotes.py
++++ b/tools/scripts/releaseNotes.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from __future__ import print_function
+ 
+diff --git a/tools/scripts/updateDocumentToC.py b/tools/scripts/updateDocumentToC.py
+index 325c8a3..41b4875 100644
+--- a/tools/scripts/updateDocumentToC.py
++++ b/tools/scripts/updateDocumentToC.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ #
+ # updateDocumentToC.py
+diff --git a/tools/scripts/updateWandbox.py b/tools/scripts/updateWandbox.py
+index fa25ef1..3668da5 100644
+--- a/tools/scripts/updateWandbox.py
++++ b/tools/scripts/updateWandbox.py
+@@ -3,10 +3,14 @@
+ import json
+ import os
+ import urllib.request
++import urllib.parse
++
+ 
+ from scriptCommon import catchPath
+ 
+ def upload(options):
++#    request_blah = urllib.request.Request('https://
++
+     request = urllib.request.Request('https://melpon.org/wandbox/api/compile.json', method='POST')
+     json_bytes = json.dumps(options).encode('utf-8')
+     request.add_header('Content-Type', 'application/json; charset=utf-8')
+diff --git a/README.md b/README.md
+index 6cbcb90..98c7116 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ ![catch logo](catch-logo-small.png)
+ 
+-*v1.1 build 3 (master branch)*
++*v1.2.0*
+ 
+ Build status (on Travis CI) [![Build Status](https://travis-ci.org/philsquared/Catch.png)](https://travis-ci.org/philsquared/Catch)
+ 
+diff --git a/docs/contributing.md b/docs/contributing.md
+index 5e22836..49a663c 100644
+--- a/docs/contributing.md
++++ b/docs/contributing.md
+@@ -6,7 +6,7 @@
+ 
+ ## Branches
+ 
+-Ongoing development is on the "develop" branch, or on feature branches that are branched off of develop. Please target any pull requests at develop, or, for larger chunks of work, a branch off of develop.
++Ongoing development is on the "develop" branch (if there is one, currently), or on feature branches that are branched off of develop. Please target any pull requests at develop, or, for larger chunks of work, a branch off of develop.
+ 
+ ## Directory structure
+ 
+diff --git a/include/catch_runner.hpp b/include/catch_runner.hpp
+index bf03ccd..8023d97 100644
+--- a/include/catch_runner.hpp
++++ b/include/catch_runner.hpp
+@@ -126,12 +126,7 @@
+         }
+ 
+         void showHelp( std::string const& processName ) {
+-            Catch::cout() << "\nCatch v"    << libraryVersion.majorVersion << "."
+-                                        << libraryVersion.minorVersion << " build "
+-                                        << libraryVersion.buildNumber;
+-            if( libraryVersion.branchName != std::string( "master" ) )
+-                Catch::cout() << " (" << libraryVersion.branchName << " branch)";
+-            Catch::cout() << "\n";
++            Catch::cout() << "\nCatch v" << libraryVersion << "\n";
+ 
+             m_cli.usage( Catch::cout(), processName );
+             Catch::cout() << "For more detail usage please see the project docs\n" << std::endl;
+@@ -148,9 +143,10 @@
+             catch( std::exception& ex ) {
+                 {
+                     Colour colourGuard( Colour::Red );
+-                    Catch::cerr()   << "\nError(s) in input:\n"
+-                                << Text( ex.what(), TextAttributes().setIndent(2) )
+-                                << "\n\n";
++                    Catch::cerr()
++                        << "\nError(s) in input:\n"
++                        << Text( ex.what(), TextAttributes().setIndent(2) )
++                        << "\n\n";
+                 }
+                 m_cli.usage( Catch::cout(), m_configData.processName );
+                 return (std::numeric_limits<int>::max)();
+diff --git a/include/internal/catch_version.h b/include/internal/catch_version.h
+index ca2feef..b6a9707 100644
+--- a/include/internal/catch_version.h
++++ b/include/internal/catch_version.h
+@@ -14,19 +14,20 @@
+     struct Version {
+         Version(    unsigned int _majorVersion,
+                     unsigned int _minorVersion,
+-                    unsigned int _buildNumber,
+-                    char const* const _branchName )
+-        :   majorVersion( _majorVersion ),
+-            minorVersion( _minorVersion ),
+-            buildNumber( _buildNumber ),
+-            branchName( _branchName )
+-        {}
++                    unsigned int _patchNumber,
++                    std::string const& _branchName,
++                    unsigned int _buildNumber );
+ 
+         unsigned int const majorVersion;
+         unsigned int const minorVersion;
+-        unsigned int const buildNumber;
+-        char const* const branchName;
++        unsigned int const patchNumber;
+ 
++        // buildNumber is only used if branchName is not null
++        std::string const branchName;
++        unsigned int const buildNumber;
++
++        friend std::ostream& operator << ( std::ostream& os, Version const& version );
++        
+     private:
+         void operator=( Version const& );
+     };
+diff --git a/include/internal/catch_version.hpp b/include/internal/catch_version.hpp
+index 4a83053..90f4a15 100644
+--- a/include/internal/catch_version.hpp
++++ b/include/internal/catch_version.hpp
+@@ -12,8 +12,33 @@
+ 
+ namespace Catch {
+ 
+-    // These numbers are maintained by a script
+-    Version libraryVersion( 1, 1, 3, "master" );
++    Version::Version
++        (   unsigned int _majorVersion,
++            unsigned int _minorVersion,
++            unsigned int _patchNumber,
++            std::string const& _branchName,
++            unsigned int _buildNumber )
++    :   majorVersion( _majorVersion ),
++        minorVersion( _minorVersion ),
++        patchNumber( _patchNumber ),
++        branchName( _branchName ),
++        buildNumber( _buildNumber )
++    {}
++
++    std::ostream& operator << ( std::ostream& os, Version const& version ) {
++        os  << version.majorVersion << "."
++            << version.minorVersion << "."
++            << version.patchNumber;
++
++        if( !version.branchName.empty() ) {
++            os  << "-" << version.branchName
++                << "." << version.buildNumber;
++        }
++        return os;
++    }
++
++    Version libraryVersion( 1, 2, 0, "", 0 );
++
+ }
+ 
+ #endif // TWOBLUECUBES_CATCH_VERSION_HPP_INCLUDED
+diff --git a/include/reporters/catch_reporter_console.hpp b/include/reporters/catch_reporter_console.hpp
+index 16896f4..150cf52 100644
+--- a/include/reporters/catch_reporter_console.hpp
++++ b/include/reporters/catch_reporter_console.hpp
+@@ -261,12 +261,7 @@
+             stream  << "\n" << getLineOfChars<'~'>() << "\n";
+             Colour colour( Colour::SecondaryText );
+             stream  << currentTestRunInfo->name
+-                    << " is a Catch v"  << libraryVersion.majorVersion << "."
+-                    << libraryVersion.minorVersion << " b"
+-                    << libraryVersion.buildNumber;
+-            if( libraryVersion.branchName != std::string( "master" ) )
+-                stream << " (" << libraryVersion.branchName << ")";
+-            stream  << " host application.\n"
++                    << " is a Catch v"  << libraryVersion << " host application.\n"
+                     << "Run with -? for options\n\n";
+ 
+             if( m_config->rngSeed() != 0 )
+diff --git a/scripts/developBuild.py b/scripts/developBuild.py
+new file mode 100644
+index 0000000..c244871
+--- /dev/null
++++ b/scripts/developBuild.py
+@@ -0,0 +1,9 @@
++from  __future__ import  print_function
++from releaseCommon import Version
++
++v = Version()
++v.incrementBuildNumber()
++v.updateVersionFile()
++v.updateReadmeFile()
++
++print( "Updated Version.hpp and README to v{0}".format( v.getVersionString() ) )
+\ No newline at end of file
+diff --git a/scripts/generateSingleHeader.py b/scripts/generateSingleHeader.py
+index cd97010..419633f 100644
+--- a/scripts/generateSingleHeader.py
++++ b/scripts/generateSingleHeader.py
+@@ -7,8 +7,9 @@
+ import string
+ 
+ from scriptCommon import catchPath
++from releaseCommon import Version
+ 
+-versionParser = re.compile( r'(\s*Version\slibraryVersion)\s*\(\s*(.*)\s*,\s*(.*)\s*,\s*(.*)\s*,\s*\"(.*)\"\s*\).*' )
++
+ includesParser = re.compile( r'\s*#include\s*"(.*)"' )
+ guardParser = re.compile( r'\s*#.*TWOBLUECUBES_CATCH_.*_INCLUDED')
+ defineParser = re.compile( r'\s*#define')
+@@ -20,22 +21,15 @@
+ blankParser = re.compile( r'^\s*$')
+ seenHeaders = set([])
+ rootPath = os.path.join( catchPath, 'include/' )
+-versionPath = os.path.join( rootPath, "internal/catch_version.hpp" )
+-readmePath = os.path.join( catchPath, "README.md" )
+ outputPath = os.path.join( catchPath, 'single_include/catch.hpp' )
+ 
+-bumpVersion = True
+ includeImpl = True
+ 
+ for arg in sys.argv[1:]:
+     arg = string.lower(arg)
+-    if arg == "nobump":
+-        bumpVersion = False
+-        print( "Not bumping version number" )
+-    elif arg == "noimpl":
++    if arg == "noimpl":
+         includeImpl = False
+-        bumpVersion = False
+-        print( "Not including impl code (and not bumping version)" )
++        print( "Not including impl code" )
+     else:
+         print( "\n** Unrecognised argument: " + arg + " **\n" )
+         exit(1)
+@@ -87,70 +81,23 @@
+                 if blanks < 2:
+                     write( line.rstrip() + "\n" )
+ 
+-class Version:
+-    def __init__(self):
+-        f = open( versionPath, 'r' )
+-        for line in f:
+-            m = versionParser.match( line )
+-            if m:
+-                self.variableDecl = m.group(1)
+-                self.majorVersion = int(m.group(2))
+-                self.minorVersion = int(m.group(3))
+-                self.buildNumber = int(m.group(4))
+-                self.branchName = m.group(5)
+-        f.close()
+ 
+-    def incrementBuildNumber(self):
+-        self.buildNumber = self.buildNumber+1
++v = Version()
++out.write( "/*\n" )
++out.write( " *  Catch v{0}\n".format( v.getVersionString() ) )
++out.write( " *  Generated: {0}\n".format( datetime.datetime.now() ) )
++out.write( " *  ----------------------------------------------------------\n" )
++out.write( " *  This file has been merged from multiple headers. Please don't edit it directly\n" )
++out.write( " *  Copyright (c) 2012 Two Blue Cubes Ltd. All rights reserved.\n" )
++out.write( " *\n" )
++out.write( " *  Distributed under the Boost Software License, Version 1.0. (See accompanying\n" )
++out.write( " *  file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)\n" )
++out.write( " */\n" )
++out.write( "#ifndef TWOBLUECUBES_SINGLE_INCLUDE_CATCH_HPP_INCLUDED\n" )
++out.write( "#define TWOBLUECUBES_SINGLE_INCLUDE_CATCH_HPP_INCLUDED\n" )
+ 
+-    def updateVersionFile(self):
+-        f = open( versionPath, 'r' )
+-        lines = []
+-        for line in f:
+-            m = versionParser.match( line )
+-            if m:
+-                lines.append( '{0}( {1}, {2}, {3}, "{4}" );'.format( self.variableDecl, self.majorVersion, self.minorVersion, self.buildNumber, self.branchName ) )
+-            else:
+-                lines.append( line.rstrip() )
+-        f.close()
+-        f = open( versionPath, 'w' )
+-        for line in lines:
+-            f.write( line + "\n" )
++parseFile( rootPath, 'catch.hpp' )
+ 
+-    def updateReadmeFile(self):
+-        f = open( readmePath, 'r' )
+-        lines = []
+-        for line in f:
+-            lines.append( line.rstrip() )
+-        f.close()
+-        f = open( readmePath, 'w' )
+-        for line in lines:
+-            if line.startswith( "*v" ):
+-                f.write( '*v{0}.{1} build {2} ({3} branch)*\n'.format( self.majorVersion, self.minorVersion, self.buildNumber, self.branchName ) )
+-            else:
+-                f.write( line + "\n" )
++out.write( "#endif // TWOBLUECUBES_SINGLE_INCLUDE_CATCH_HPP_INCLUDED\n\n" )
+ 
+-def generateSingleInclude():
+-    v = Version()
+-    if bumpVersion:
+-        v.incrementBuildNumber()
+-        v.updateVersionFile()
+-        v.updateReadmeFile()
+-    out.write( "/*\n" )
+-    out.write( " *  CATCH v{0}.{1} build {2} ({3} branch)\n".format( v.majorVersion, v.minorVersion, v.buildNumber, v.branchName ) )
+-    out.write( " *  Generated: {0}\n".format( datetime.datetime.now() ) )
+-    out.write( " *  ----------------------------------------------------------\n" )
+-    out.write( " *  This file has been merged from multiple headers. Please don't edit it directly\n" )
+-    out.write( " *  Copyright (c) 2012 Two Blue Cubes Ltd. All rights reserved.\n" )
+-    out.write( " *\n" )
+-    out.write( " *  Distributed under the Boost Software License, Version 1.0. (See accompanying\n" )
+-    out.write( " *  file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)\n" )
+-    out.write( " */\n" )
+-    out.write( "#ifndef TWOBLUECUBES_SINGLE_INCLUDE_CATCH_HPP_INCLUDED\n" )
+-    out.write( "#define TWOBLUECUBES_SINGLE_INCLUDE_CATCH_HPP_INCLUDED\n" )
+-
+-    parseFile( rootPath, 'catch.hpp' )
+-
+-    out.write( "#endif // TWOBLUECUBES_SINGLE_INCLUDE_CATCH_HPP_INCLUDED\n\n" )
+-
+-generateSingleInclude()
++print ("Generated single include for Catch v{0}\n".format( v.getVersionString() ) )
+diff --git a/scripts/majorRelease.py b/scripts/majorRelease.py
+new file mode 100644
+index 0000000..03b7e78
+--- /dev/null
++++ b/scripts/majorRelease.py
+@@ -0,0 +1,9 @@
++from  __future__ import  print_function
++from releaseCommon import Version
++
++v = Version()
++v.incrementMajorVersion()
++v.updateVersionFile()
++v.updateReadmeFile()
++
++print( "Updated Version.hpp and README to v{0}".format( v.getVersionString() ) )
+\ No newline at end of file
+diff --git a/scripts/minorRelease.py b/scripts/minorRelease.py
+new file mode 100644
+index 0000000..bbd97ed
+--- /dev/null
++++ b/scripts/minorRelease.py
+@@ -0,0 +1,9 @@
++from  __future__ import  print_function
++from releaseCommon import Version
++
++v = Version()
++v.incrementMinorVersion()
++v.updateVersionFile()
++v.updateReadmeFile()
++
++print( "Updated Version.hpp and README to v{0}".format( v.getVersionString() ) )
+\ No newline at end of file
+diff --git a/scripts/patchRelease.py b/scripts/patchRelease.py
+new file mode 100644
+index 0000000..6abf87a
+--- /dev/null
++++ b/scripts/patchRelease.py
+@@ -0,0 +1,9 @@
++from  __future__ import  print_function
++from releaseCommon import Version
++
++v = Version()
++v.incrementPatchNumber()
++v.updateVersionFile()
++v.updateReadmeFile()
++
++print( "Updated Version.hpp and README to v{0}".format( v.getVersionString() ) )
+\ No newline at end of file
+diff --git a/scripts/releaseCommon.py b/scripts/releaseCommon.py
+new file mode 100644
+index 0000000..14eb235
+--- /dev/null
++++ b/scripts/releaseCommon.py
+@@ -0,0 +1,89 @@
++from  __future__ import  print_function
++
++import os
++import sys
++import re
++import string
++
++from scriptCommon import catchPath
++
++versionParser = re.compile( r'(\s*Version\slibraryVersion)\s*\(\s*(.*)\s*,\s*(.*)\s*,\s*(.*)\s*,\s*\"(.*)\"\s*,\s*(.*)\s*\).*' )
++rootPath = os.path.join( catchPath, 'include/' )
++versionPath = os.path.join( rootPath, "internal/catch_version.hpp" )
++readmePath = os.path.join( catchPath, "README.md" )
++
++class Version:
++    def __init__(self):
++        f = open( versionPath, 'r' )
++        for line in f:
++            m = versionParser.match( line )
++            if m:
++                self.variableDecl = m.group(1)
++                self.majorVersion = int(m.group(2))
++                self.minorVersion = int(m.group(3))
++                self.patchNumber = int(m.group(4))
++                self.branchName = m.group(5)
++                self.buildNumber = int(m.group(6))
++        f.close()
++
++    def nonDevelopRelease(self):
++        if self.branchName != "":
++            self.branchName = ""
++            self.buildNumber = 0
++    def developBuild(self):
++        if self.branchName == "":
++            self.branchName = "develop"
++            self.buildNumber = 0
++
++    def incrementBuildNumber(self):
++        self.developBuild()
++        self.buildNumber = self.buildNumber+1
++
++    def incrementPatchNumber(self):
++        self.nonDevelopRelease()
++        self.patchNumber = self.patchNumber+1
++
++    def incrementMinorVersion(self):
++        self.nonDevelopRelease()
++        self.patchNumber = 0
++        self.minorVersion = self.minorVersion+1
++
++    def incrementMajorVersion(self):
++        self.nonDevelopRelease()
++        self.patchNumber = 0
++        self.minorVersion = 0
++        self.majorVersion = self.majorVersion+1
++
++    def getVersionString(self):
++        versionString = '{0}.{1}.{2}'.format( self.majorVersion, self.minorVersion, self.patchNumber )
++        if self.branchName != "":
++            versionString = versionString + '-{0}.{1}'.format( self.branchName, self.buildNumber )
++        return versionString
++
++    def updateVersionFile(self):
++        f = open( versionPath, 'r' )
++        lines = []
++        for line in f:
++            m = versionParser.match( line )
++            if m:
++                lines.append( '{0}( {1}, {2}, {3}, "{4}", {5} );'.format( self.variableDecl, self.majorVersion, self.minorVersion, self.patchNumber, self.branchName, self.buildNumber ) )
++            else:
++                lines.append( line.rstrip() )
++        f.close()
++        f = open( versionPath, 'w' )
++        for line in lines:
++            f.write( line + "\n" )
++
++    def updateReadmeFile(self):
++        f = open( readmePath, 'r' )
++        lines = []
++        for line in f:
++            lines.append( line.rstrip() )
++        f.close()
++        f = open( readmePath, 'w' )
++        for line in lines:
++            if line.startswith( "*v" ):
++                f.write( '*v{0}*\n'.format( self.getVersionString() ) )
++            else:
++                f.write( line + "\n" )
++
+diff --git a/single_include/catch.hpp b/single_include/catch.hpp
+index 391c7ab..24d677f 100644
+--- a/single_include/catch.hpp
++++ b/single_include/catch.hpp
+@@ -1,6 +1,6 @@
+ /*
+- *  CATCH v1.1 build 3 (master branch)
+- *  Generated: 2015-05-21 06:16:00.388118
++ *  Catch v1.2.0
++ *  Generated: 2015-06-29 08:12:52.943445
+  *  ----------------------------------------------------------
+  *  This file has been merged from multiple headers. Please don't edit it directly
+  *  Copyright (c) 2012 Two Blue Cubes Ltd. All rights reserved.
+@@ -798,8 +798,8 @@
+                         ResultDisposition::Flags resultDisposition );
+ 
+         template<typename T>
+-        ExpressionLhs<T const&> operator->* ( T const& operand );
+-        ExpressionLhs<bool> operator->* ( bool value );
++        ExpressionLhs<T const&> operator <= ( T const& operand );
++        ExpressionLhs<bool> operator <= ( bool value );
+ 
+         template<typename T>
+         ResultBuilder& operator << ( T const& value ) {
+@@ -1461,11 +1461,11 @@
+ namespace Catch {
+ 
+     template<typename T>
+-    inline ExpressionLhs<T const&> ResultBuilder::operator->* ( T const& operand ) {
++    inline ExpressionLhs<T const&> ResultBuilder::operator <= ( T const& operand ) {
+         return ExpressionLhs<T const&>( *this, operand );
+     }
+ 
+-    inline ExpressionLhs<bool> ResultBuilder::operator->* ( bool value ) {
++    inline ExpressionLhs<bool> ResultBuilder::operator <= ( bool value ) {
+         return ExpressionLhs<bool>( *this, value );
+     }
+ 
+@@ -1637,7 +1637,7 @@
+     do { \
+         Catch::ResultBuilder __catchResult( macroName, CATCH_INTERNAL_LINEINFO, #expr, resultDisposition ); \
+         try { \
+-            ( __catchResult->*expr ).endExpression(); \
++            ( __catchResult <= expr ).endExpression(); \
+         } \
+         catch( ... ) { \
+             __catchResult.useActiveException( Catch::ResultDisposition::Normal ); \
+@@ -5539,18 +5539,19 @@
+     struct Version {
+         Version(    unsigned int _majorVersion,
+                     unsigned int _minorVersion,
+-                    unsigned int _buildNumber,
+-                    char const* const _branchName )
+-        :   majorVersion( _majorVersion ),
+-            minorVersion( _minorVersion ),
+-            buildNumber( _buildNumber ),
+-            branchName( _branchName )
+-        {}
++                    unsigned int _patchNumber,
++                    std::string const& _branchName,
++                    unsigned int _buildNumber );
+ 
+         unsigned int const majorVersion;
+         unsigned int const minorVersion;
++        unsigned int const patchNumber;
++
++        // buildNumber is only used if branchName is not null
++        std::string const branchName;
+         unsigned int const buildNumber;
+-        char const* const branchName;
++
++        friend std::ostream& operator << ( std::ostream& os, Version const& version );
+ 
+     private:
+         void operator=( Version const& );
+@@ -5670,12 +5671,7 @@
+         }
+ 
+         void showHelp( std::string const& processName ) {
+-            Catch::cout() << "\nCatch v"    << libraryVersion.majorVersion << "."
+-                                        << libraryVersion.minorVersion << " build "
+-                                        << libraryVersion.buildNumber;
+-            if( libraryVersion.branchName != std::string( "master" ) )
+-                Catch::cout() << " (" << libraryVersion.branchName << " branch)";
+-            Catch::cout() << "\n";
++            Catch::cout() << "\nCatch v" << libraryVersion << "\n";
+ 
+             m_cli.usage( Catch::cout(), processName );
+             Catch::cout() << "For more detail usage please see the project docs\n" << std::endl;
+@@ -5692,9 +5688,10 @@
+             catch( std::exception& ex ) {
+                 {
+                     Colour colourGuard( Colour::Red );
+-                    Catch::cerr()   << "\nError(s) in input:\n"
+-                                << Text( ex.what(), TextAttributes().setIndent(2) )
+-                                << "\n\n";
++                    Catch::cerr()
++                        << "\nError(s) in input:\n"
++                        << Text( ex.what(), TextAttributes().setIndent(2) )
++                        << "\n\n";
+                 }
+                 m_cli.usage( Catch::cout(), m_configData.processName );
+                 return (std::numeric_limits<int>::max)();
+@@ -6806,8 +6803,33 @@
+ 
+ namespace Catch {
+ 
+-    // These numbers are maintained by a script
+-    Version libraryVersion( 1, 1, 3, "master" );
++    Version::Version
++        (   unsigned int _majorVersion,
++            unsigned int _minorVersion,
++            unsigned int _patchNumber,
++            std::string const& _branchName,
++            unsigned int _buildNumber )
++    :   majorVersion( _majorVersion ),
++        minorVersion( _minorVersion ),
++        patchNumber( _patchNumber ),
++        branchName( _branchName ),
++        buildNumber( _buildNumber )
++    {}
++
++    std::ostream& operator << ( std::ostream& os, Version const& version ) {
++        os  << version.majorVersion << "."
++            << version.minorVersion << "."
++            << version.patchNumber;
++
++        if( !version.branchName.empty() ) {
++            os  << "-" << version.branchName
++                << "." << version.buildNumber;
++        }
++        return os;
++    }
++
++    Version libraryVersion( 1, 2, 0, "", 0 );
++
+ }
+ 
+ // #included from: catch_message.hpp
+@@ -8733,12 +8755,7 @@
+             stream  << "\n" << getLineOfChars<'~'>() << "\n";
+             Colour colour( Colour::SecondaryText );
+             stream  << currentTestRunInfo->name
+-                    << " is a Catch v"  << libraryVersion.majorVersion << "."
+-                    << libraryVersion.minorVersion << " b"
+-                    << libraryVersion.buildNumber;
+-            if( libraryVersion.branchName != std::string( "master" ) )
+-                stream << " (" << libraryVersion.branchName << ")";
+-            stream  << " host application.\n"
++                    << " is a Catch v"  << libraryVersion << " host application.\n"
+                     << "Run with -? for options\n\n";
+ 
+             if( m_config->rngSeed() != 0 )
+diff --git a/README.md b/README.md
+index 193cf55..6cbcb90 100644
+--- a/README.md
++++ b/README.md
+@@ -6,7 +6,7 @@
+ 
+ [Please see this page if you are updating from a version before 1.0](docs/whats-changed.md)
+ 
+-<a href="https://raw.githubusercontent.com/philsquared/Catch/develop/single_include/catch.hpp">[The latest, single header, version can be downloaded directly using this link]</a>
++<a href="https://raw.githubusercontent.com/philsquared/Catch/master/single_include/catch.hpp">[The latest, single header, version can be downloaded directly using this link]</a>
+ 
+ ## What's the Catch?
+ 
+diff --git a/tools/scripts/approvalTests.py b/tools/scripts/approvalTests.py
+index faedce7..f8b9425 100755
+--- a/tools/scripts/approvalTests.py
++++ b/tools/scripts/approvalTests.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from __future__ import print_function
+ 
+diff --git a/tools/scripts/approve.py b/tools/scripts/approve.py
+index 252d08e..997b8c7 100755
+--- a/tools/scripts/approve.py
++++ b/tools/scripts/approve.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ 
+diff --git a/tools/scripts/benchmarkCompile.py b/tools/scripts/benchmarkCompile.py
+index 586c26a..34113b9 100755
+--- a/tools/scripts/benchmarkCompile.py
++++ b/tools/scripts/benchmarkCompile.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from __future__ import print_function
+ 
+diff --git a/tools/scripts/developBuild.py b/tools/scripts/developBuild.py
+index a8115fe..9252c7d 100755
+--- a/tools/scripts/developBuild.py
++++ b/tools/scripts/developBuild.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import releaseCommon
+diff --git a/tools/scripts/embedClara.py b/tools/scripts/embedClara.py
+index 7ceb3e3..d8c1520 100755
+--- a/tools/scripts/embedClara.py
++++ b/tools/scripts/embedClara.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ # Execute this script any time you import a new copy of Clara into the third_party area
+ import os
+diff --git a/tools/scripts/extractFeaturesFromReleaseNotes.py b/tools/scripts/extractFeaturesFromReleaseNotes.py
+index 090f477..11f4955 100644
+--- a/tools/scripts/extractFeaturesFromReleaseNotes.py
++++ b/tools/scripts/extractFeaturesFromReleaseNotes.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ #
+ # extractFeaturesFromReleaseNotes.py
+diff --git a/tools/scripts/fixWhitespace.py b/tools/scripts/fixWhitespace.py
+index bfa4aa0..4591c1c 100755
+--- a/tools/scripts/fixWhitespace.py
++++ b/tools/scripts/fixWhitespace.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import os
+diff --git a/tools/scripts/generateSingleHeader.py b/tools/scripts/generateSingleHeader.py
+index f896877..0de1a63 100755
+--- a/tools/scripts/generateSingleHeader.py
++++ b/tools/scripts/generateSingleHeader.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from __future__ import print_function
+ 
+diff --git a/tools/scripts/majorRelease.py b/tools/scripts/majorRelease.py
+index 8da3406..e9e285a 100755
+--- a/tools/scripts/majorRelease.py
++++ b/tools/scripts/majorRelease.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import releaseCommon
+diff --git a/tools/scripts/minorRelease.py b/tools/scripts/minorRelease.py
+index 6e71cd8..2b57c2e 100755
+--- a/tools/scripts/minorRelease.py
++++ b/tools/scripts/minorRelease.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import releaseCommon
+diff --git a/tools/scripts/patchRelease.py b/tools/scripts/patchRelease.py
+index 1417642..d20db71 100755
+--- a/tools/scripts/patchRelease.py
++++ b/tools/scripts/patchRelease.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import releaseCommon
+diff --git a/tools/scripts/releaseNotes.py b/tools/scripts/releaseNotes.py
+index 5e770bb..7f580e9 100755
+--- a/tools/scripts/releaseNotes.py
++++ b/tools/scripts/releaseNotes.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from __future__ import print_function
+ 
+diff --git a/tools/scripts/updateDocumentToC.py b/tools/scripts/updateDocumentToC.py
+index 325c8a3..41b4875 100644
+--- a/tools/scripts/updateDocumentToC.py
++++ b/tools/scripts/updateDocumentToC.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ #
+ # updateDocumentToC.py
+diff --git a/tools/scripts/updateWandbox.py b/tools/scripts/updateWandbox.py
+index fa25ef1..3668da5 100644
+--- a/tools/scripts/updateWandbox.py
++++ b/tools/scripts/updateWandbox.py
+@@ -3,10 +3,14 @@
+ import json
+ import os
+ import urllib.request
++import urllib.parse
++
+ 
+ from scriptCommon import catchPath
+ 
+ def upload(options):
++#    request_blah = urllib.request.Request('https://
++
+     request = urllib.request.Request('https://melpon.org/wandbox/api/compile.json', method='POST')
+     json_bytes = json.dumps(options).encode('utf-8')
+     request.add_header('Content-Type', 'application/json; charset=utf-8')
+diff --git a/scripts/approvalTests.py b/scripts/approvalTests.py
+index 1bf114a..14a5354 100644
+--- a/scripts/approvalTests.py
++++ b/scripts/approvalTests.py
+@@ -3,18 +3,21 @@
+ import subprocess
+ import re
+ 
++from scriptCommon import catchPath
++
+ filenameParser = re.compile( r'\s*.*/(.*\..pp)(.*)' )
+ hexParser = re.compile( r'(.*)\b(0[xX][0-9a-fA-F]+)\b(.*)' )
+ 
+-catchPath = os.path.realpath(os.path.dirname(sys.argv[0]))
+-baselinesPath = os.path.join( catchPath, '../projects/SelfTest/Baselines/approvedResults.txt' )
+-rawResultsPath = os.path.join( catchPath, '../projects/SelfTest/Baselines/_rawResults.tmp' )
+-filteredResultsPath = os.path.join( catchPath, '../projects/SelfTest/Baselines/unapprovedResults.txt' )
++#catchPath = os.path.dirname(os.path.realpath( os.path.dirname(sys.argv[0])))
++
++baselinesPath = os.path.join( catchPath, 'projects/SelfTest/Baselines/approvedResults.txt' )
++rawResultsPath = os.path.join( catchPath, 'projects/SelfTest/Baselines/_rawResults.tmp' )
++filteredResultsPath = os.path.join( catchPath, 'projects/SelfTest/Baselines/unapprovedResults.txt' )
+ 
+ if len(sys.argv) == 2:
+ 	cmdPath = sys.argv[1]
+ else:
+-	cmdPath = "../projects/XCode4/CatchSelfTest/DerivedData/CatchSelfTest/Build/Products/Debug/CatchSelfTest"
++	cmdPath = os.path.join( catchPath, 'projects/XCode4/CatchSelfTest/DerivedData/CatchSelfTest/Build/Products/Debug/CatchSelfTest' )
+ 
+ f = open( rawResultsPath, 'w' )
+ subprocess.call([ cmdPath, "~dummy", "-s", "-w", "NoAssertions", "-r", "console" ], stdout=f, stderr=f )
+diff --git a/scripts/approve.py b/scripts/approve.py
+index 25a566b..9302ae5 100644
+--- a/scripts/approve.py
++++ b/scripts/approve.py
+@@ -2,9 +2,10 @@
+ import sys
+ import shutil
+ 
+-catchPath = os.path.realpath(os.path.dirname(sys.argv[0]))
+-baselinesPath = os.path.join( catchPath, '../projects/SelfTest/Baselines/approvedResults.txt' )
+-filteredResultsPath = os.path.join( catchPath, '../projects/SelfTest/Baselines/unapprovedResults.txt' )
++from scriptCommon import catchPath
++
++baselinesPath = os.path.join( catchPath, 'projects/SelfTest/Baselines/approvedResults.txt' )
++filteredResultsPath = os.path.join( catchPath, 'projects/SelfTest/Baselines/unapprovedResults.txt' )
+ 
+ if os.path.isfile( filteredResultsPath ):
+ 	os.remove( baselinesPath )
+diff --git a/scripts/generateSingleHeader.py b/scripts/generateSingleHeader.py
+index 85b24ec..0301cd6 100644
+--- a/scripts/generateSingleHeader.py
++++ b/scripts/generateSingleHeader.py
+@@ -3,6 +3,8 @@
+ import re
+ import datetime
+ 
++from scriptCommon import catchPath
++
+ versionParser = re.compile( r'(\s*Version\slibraryVersion)\s*\(\s*(.*)\s*,\s*(.*)\s*,\s*(.*)\s*,\s*\"(.*)\"\s*\).*' )
+ includesParser = re.compile( r'\s*#include\s*"(.*)"' )
+ guardParser = re.compile( r'\s*#.*_INCLUDED')
+@@ -11,10 +13,9 @@
+ commentParser2 = re.compile( r'^\s*\*')
+ blankParser = re.compile( r'^\s*$')
+ seenHeaders = set([])
+-catchPath = os.path.realpath(os.path.dirname(sys.argv[0]))
+-rootPath = os.path.join( catchPath, '../include/' )
++rootPath = os.path.join( catchPath, 'include/' )
+ versionPath = os.path.join( rootPath, "internal/catch_version.hpp" )
+-readmePath = os.path.join( catchPath, "../README.md" )
++readmePath = os.path.join( catchPath, "README.md" )
+ #outputPath = os.path.join( catchPath, 'single_include/catch.hpp' )
+ 
+ bumpVersion = len(sys.argv) < 2 or sys.argv[1] <> "nobump"
+diff --git a/scripts/scriptCommon.py b/scripts/scriptCommon.py
+new file mode 100644
+index 0000000..5710ba9
+--- /dev/null
++++ b/scripts/scriptCommon.py
+@@ -0,0 +1,4 @@
++import os
++import sys
++
++catchPath = os.path.dirname(os.path.realpath( os.path.dirname(sys.argv[0])))
+\ No newline at end of file
+diff --git a/projects/SelfTest/Baselines/approvedResults.txt b/projects/SelfTest/Baselines/approvedResults.txt
+index b68f72f..ccec55c 100644
+--- a/projects/SelfTest/Baselines/approvedResults.txt
++++ b/projects/SelfTest/Baselines/approvedResults.txt
+@@ -1023,37 +1023,37 @@
+ -------------------------------------------------------------------------------
+ ./succeeding/exceptions/explicit
+ -------------------------------------------------------------------------------
+-ExceptionTests.cpp:33
++ExceptionTests.cpp:31
+ ...............................................................................
+ 
+-ExceptionTests.cpp:35:
++ExceptionTests.cpp:33:
+ PASSED:
+   REQUIRE_THROWS_AS( thisThrows() )
+ 
+-ExceptionTests.cpp:36:
++ExceptionTests.cpp:34:
+ PASSED:
+   REQUIRE_NOTHROW( thisDoesntThrow() )
+ 
+-ExceptionTests.cpp:37:
++ExceptionTests.cpp:35:
+ PASSED:
+   REQUIRE_THROWS( thisThrows() )
+ 
+ -------------------------------------------------------------------------------
+ ./failing/exceptions/explicit
+ -------------------------------------------------------------------------------
+-ExceptionTests.cpp:41
++ExceptionTests.cpp:38
+ ...............................................................................
+ 
+-ExceptionTests.cpp:43: FAILED:
++ExceptionTests.cpp:40: FAILED:
+   CHECK_THROWS_AS( thisThrows() )
+ due to unexpected exception with message:
+   expected exception
+ 
+-ExceptionTests.cpp:44: FAILED:
++ExceptionTests.cpp:41: FAILED:
+   CHECK_THROWS_AS( thisDoesntThrow() )
+ because no exception was thrown where one was expected:
+ 
+-ExceptionTests.cpp:45: FAILED:
++ExceptionTests.cpp:42: FAILED:
+   CHECK_NOTHROW( thisThrows() )
+ due to unexpected exception with message:
+   expected exception
+@@ -1061,24 +1061,24 @@
+ -------------------------------------------------------------------------------
+ ./failing/exceptions/implicit
+ -------------------------------------------------------------------------------
+-ExceptionTests.cpp:48
++ExceptionTests.cpp:45
+ ...............................................................................
+ 
+-ExceptionTests.cpp:48: FAILED:
++ExceptionTests.cpp:45: FAILED:
+ due to unexpected exception with message:
+   unexpected exception
+ 
+ -------------------------------------------------------------------------------
+ ./failing/exceptions/implicit/2
+ -------------------------------------------------------------------------------
+-ExceptionTests.cpp:54
++ExceptionTests.cpp:51
+ ...............................................................................
+ 
+-ExceptionTests.cpp:56:
++ExceptionTests.cpp:53:
+ PASSED:
+   CHECK( 1 == 1 )
+ 
+-ExceptionTests.cpp:56: FAILED:
++ExceptionTests.cpp:53: FAILED:
+   {Unknown expression after the reported line}
+ due to unexpected exception with message:
+   unexpected exception
+@@ -1087,20 +1087,20 @@
+ ./failing/exceptions/implicit/3
+   section name
+ -------------------------------------------------------------------------------
+-ExceptionTests.cpp:62
++ExceptionTests.cpp:59
+ ...............................................................................
+ 
+-ExceptionTests.cpp:62: FAILED:
++ExceptionTests.cpp:59: FAILED:
+ due to unexpected exception with message:
+   unexpected exception
+ 
+ -------------------------------------------------------------------------------
+ ./failing/exceptions/implicit/4
+ -------------------------------------------------------------------------------
+-ExceptionTests.cpp:69
++ExceptionTests.cpp:66
+ ...............................................................................
+ 
+-ExceptionTests.cpp:71: FAILED:
++ExceptionTests.cpp:68: FAILED:
+   CHECK( thisThrows() == 0 )
+ due to unexpected exception with message:
+   expected exception
+@@ -1108,7 +1108,7 @@
+ -------------------------------------------------------------------------------
+ ./succeeding/exceptions/implicit
+ -------------------------------------------------------------------------------
+-ExceptionTests.cpp:75
++ExceptionTests.cpp:71
+ ...............................................................................
+ 
+ 
+@@ -1117,42 +1117,42 @@
+ -------------------------------------------------------------------------------
+ ./failing/exceptions/custom
+ -------------------------------------------------------------------------------
+-ExceptionTests.cpp:112
++ExceptionTests.cpp:108
+ ...............................................................................
+ 
+-ExceptionTests.cpp:112: FAILED:
++ExceptionTests.cpp:108: FAILED:
+ due to unexpected exception with message:
+   custom exception
+ 
+ -------------------------------------------------------------------------------
+ ./failing/exceptions/custom/nothrow
+ -------------------------------------------------------------------------------
+-ExceptionTests.cpp:120
++ExceptionTests.cpp:119
+ ...............................................................................
+ 
+-ExceptionTests.cpp:122: FAILED:
+-  REQUIRE_NOTHROW( throw CustomException( "unexpected custom exception" ) )
++ExceptionTests.cpp:121: FAILED:
++  REQUIRE_NOTHROW( throwCustom() )
+ due to unexpected exception with message:
+-  unexpected custom exception
++  custom exception - not std
+ 
+ -------------------------------------------------------------------------------
+ ./failing/exceptions/custom/throw
+ -------------------------------------------------------------------------------
+-ExceptionTests.cpp:125
++ExceptionTests.cpp:124
+ ...............................................................................
+ 
+-ExceptionTests.cpp:127: FAILED:
+-  REQUIRE_THROWS_AS( throw CustomException( "custom exception - not std" ) )
++ExceptionTests.cpp:126: FAILED:
++  REQUIRE_THROWS_AS( throwCustom() )
+ due to unexpected exception with message:
+   custom exception - not std
+ 
+ -------------------------------------------------------------------------------
+ ./failing/exceptions/custom/double
+ -------------------------------------------------------------------------------
+-ExceptionTests.cpp:131
++ExceptionTests.cpp:130
+ ...............................................................................
+ 
+-ExceptionTests.cpp:131: FAILED:
++ExceptionTests.cpp:130: FAILED:
+ due to unexpected exception with message:
+   3.14
+ 
+@@ -6040,54 +6040,54 @@
+     <testcase classname="global" name="./succeeding/exceptions/explicit" time="tbd"/>
+     <testcase classname="global" name="./failing/exceptions/explicit" time="tbd">
+       <error message="thisThrows()" type="CHECK_THROWS_AS">
+-ExceptionTests.cpp:43
++ExceptionTests.cpp:40
+       </error>
+       <failure message="thisDoesntThrow()" type="CHECK_THROWS_AS">
+-ExceptionTests.cpp:44
++ExceptionTests.cpp:41
+       </failure>
+       <error message="thisThrows()" type="CHECK_NOTHROW">
+-ExceptionTests.cpp:45
++ExceptionTests.cpp:42
+       </error>
+     </testcase>
+     <testcase classname="global" name="./failing/exceptions/implicit" time="tbd">
+       <error type="TEST_CASE">
+-ExceptionTests.cpp:48
++ExceptionTests.cpp:45
+       </error>
+     </testcase>
+     <testcase classname="global" name="./failing/exceptions/implicit/2" time="tbd">
+       <error message="{Unknown expression after the reported line}">
+-ExceptionTests.cpp:56
++ExceptionTests.cpp:53
+       </error>
+     </testcase>
+     <testcase classname="global" name="./failing/exceptions/implicit/3" time="tbd">
+       <error type="TEST_CASE">
+-ExceptionTests.cpp:62
++ExceptionTests.cpp:59
+       </error>
+     </testcase>
+     <testcase classname="global" name="./failing/exceptions/implicit/4" time="tbd">
+       <error message="thisThrows() == 0" type="CHECK">
+-ExceptionTests.cpp:71
++ExceptionTests.cpp:68
+       </error>
+     </testcase>
+     <testcase classname="global" name="./succeeding/exceptions/implicit" time="tbd"/>
+     <testcase classname="global" name="./failing/exceptions/custom" time="tbd">
+       <error type="TEST_CASE">
+-ExceptionTests.cpp:112
++ExceptionTests.cpp:108
+       </error>
+     </testcase>
+     <testcase classname="global" name="./failing/exceptions/custom/nothrow" time="tbd">
+-      <error message="throw CustomException( &quot;unexpected custom exception&quot; )" type="REQUIRE_NOTHROW">
+-ExceptionTests.cpp:122
++      <error message="throwCustom()" type="REQUIRE_NOTHROW">
++ExceptionTests.cpp:121
+       </error>
+     </testcase>
+     <testcase classname="global" name="./failing/exceptions/custom/throw" time="tbd">
+-      <error message="throw CustomException( &quot;custom exception - not std&quot; )" type="REQUIRE_THROWS_AS">
+-ExceptionTests.cpp:127
++      <error message="throwCustom()" type="REQUIRE_THROWS_AS">
++ExceptionTests.cpp:126
+       </error>
+     </testcase>
+     <testcase classname="global" name="./failing/exceptions/custom/double" time="tbd">
+       <error type="TEST_CASE">
+-ExceptionTests.cpp:131
++ExceptionTests.cpp:130
+       </error>
+     </testcase>
+     <testcase classname="global" name="./succeeding/exceptions/notimplemented" time="tbd"/>
+@@ -7713,23 +7713,23 @@
+       <OverallResult success="false"/>
+     </TestCase>
+     <TestCase name="./succeeding/exceptions/explicit">
++ExceptionTests.cpp" line="33">
++        <Original>
++          thisThrows()
++        </Original>
++        <Expanded>
++          thisThrows()
++        </Expanded>
++      </Expression>
++ExceptionTests.cpp" line="34">
++        <Original>
++          thisDoesntThrow()
++        </Original>
++        <Expanded>
++          thisDoesntThrow()
++        </Expanded>
++      </Expression>
+ ExceptionTests.cpp" line="35">
+-        <Original>
+-          thisThrows()
+-        </Original>
+-        <Expanded>
+-          thisThrows()
+-        </Expanded>
+-      </Expression>
+-ExceptionTests.cpp" line="36">
+-        <Original>
+-          thisDoesntThrow()
+-        </Original>
+-        <Expanded>
+-          thisDoesntThrow()
+-        </Expanded>
+-      </Expression>
+-ExceptionTests.cpp" line="37">
+         <Original>
+           thisThrows()
+         </Original>
+@@ -7740,18 +7740,18 @@
+       <OverallResult success="true"/>
+     </TestCase>
+     <TestCase name="./failing/exceptions/explicit">
+-ExceptionTests.cpp" line="43">
++ExceptionTests.cpp" line="40">
+         <Original>
+           thisThrows()
+         </Original>
+         <Expanded>
+           thisThrows()
+         </Expanded>
+-ExceptionTests.cpp" line="43">
++ExceptionTests.cpp" line="40">
+           expected exception
+         </Exception>
+       </Expression>
+-ExceptionTests.cpp" line="44">
++ExceptionTests.cpp" line="41">
+         <Original>
+           thisDoesntThrow()
+         </Original>
+@@ -7759,27 +7759,27 @@
+           thisDoesntThrow()
+         </Expanded>
+       </Expression>
+-ExceptionTests.cpp" line="45">
++ExceptionTests.cpp" line="42">
+         <Original>
+           thisThrows()
+         </Original>
+         <Expanded>
+           thisThrows()
+         </Expanded>
+-ExceptionTests.cpp" line="45">
++ExceptionTests.cpp" line="42">
+           expected exception
+         </Exception>
+       </Expression>
+       <OverallResult success="false"/>
+     </TestCase>
+     <TestCase name="./failing/exceptions/implicit">
+-ExceptionTests.cpp" line="48">
++ExceptionTests.cpp" line="45">
+         unexpected exception
+       </Exception>
+       <OverallResult success="false"/>
+     </TestCase>
+     <TestCase name="./failing/exceptions/implicit/2">
+-ExceptionTests.cpp" line="56">
++ExceptionTests.cpp" line="53">
+         <Original>
+           1 == 1
+         </Original>
+@@ -7787,14 +7787,14 @@
+           1 == 1
+         </Expanded>
+       </Expression>
+-ExceptionTests.cpp" line="56">
++ExceptionTests.cpp" line="53">
+         <Original>
+           {Unknown expression after the reported line}
+         </Original>
+         <Expanded>
+           {Unknown expression after the reported line}
+         </Expanded>
+-ExceptionTests.cpp" line="56">
++ExceptionTests.cpp" line="53">
+           unexpected exception
+         </Exception>
+       </Expression>
+@@ -7802,7 +7802,7 @@
+     </TestCase>
+     <TestCase name="./failing/exceptions/implicit/3">
+       <Section name="section name">
+-ExceptionTests.cpp" line="62">
++ExceptionTests.cpp" line="59">
+           unexpected exception
+         </Exception>
+         <OverallResults successes="0" failures="1"/>
+@@ -7810,14 +7810,14 @@
+       <OverallResult success="false"/>
+     </TestCase>
+     <TestCase name="./failing/exceptions/implicit/4">
+-ExceptionTests.cpp" line="71">
++ExceptionTests.cpp" line="68">
+         <Original>
+           thisThrows() == 0
+         </Original>
+         <Expanded>
+           thisThrows() == 0
+         </Expanded>
+-ExceptionTests.cpp" line="71">
++ExceptionTests.cpp" line="68">
+           expected exception
+         </Exception>
+       </Expression>
+@@ -7827,41 +7827,41 @@
+       <OverallResult success="true"/>
+     </TestCase>
+     <TestCase name="./failing/exceptions/custom">
+-ExceptionTests.cpp" line="112">
++ExceptionTests.cpp" line="108">
+         custom exception
+       </Exception>
+       <OverallResult success="false"/>
+     </TestCase>
+     <TestCase name="./failing/exceptions/custom/nothrow">
+-ExceptionTests.cpp" line="122">
++ExceptionTests.cpp" line="121">
+         <Original>
+-          throw CustomException( &quot;unexpected custom exception&quot; )
++          throwCustom()
+         </Original>
+         <Expanded>
+-          throw CustomException( &quot;unexpected custom exception&quot; )
++          throwCustom()
+         </Expanded>
+-ExceptionTests.cpp" line="122">
+-          unexpected custom exception
++ExceptionTests.cpp" line="121">
++          custom exception - not std
+         </Exception>
+       </Expression>
+       <OverallResult success="false"/>
+     </TestCase>
+     <TestCase name="./failing/exceptions/custom/throw">
+-ExceptionTests.cpp" line="127">
++ExceptionTests.cpp" line="126">
+         <Original>
+-          throw CustomException( &quot;custom exception - not std&quot; )
++          throwCustom()
+         </Original>
+         <Expanded>
+-          throw CustomException( &quot;custom exception - not std&quot; )
++          throwCustom()
+         </Expanded>
+-ExceptionTests.cpp" line="127">
++ExceptionTests.cpp" line="126">
+           custom exception - not std
+         </Exception>
+       </Expression>
+       <OverallResult success="false"/>
+     </TestCase>
+     <TestCase name="./failing/exceptions/custom/double">
+-ExceptionTests.cpp" line="131">
++ExceptionTests.cpp" line="130">
+         3.14
+       </Exception>
+       <OverallResult success="false"/>
+@@ -12538,36 +12538,36 @@
+ [Finished: './failing/conditions/not' 1 test case failed (All 8 assertions failed)]
+ 
+ [Running: ./succeeding/exceptions/explicit]
++ExceptionTests.cpp:33: thisThrows() succeeded
++ExceptionTests.cpp:34: thisDoesntThrow() succeeded
+ ExceptionTests.cpp:35: thisThrows() succeeded
+-ExceptionTests.cpp:36: thisDoesntThrow() succeeded
+-ExceptionTests.cpp:37: thisThrows() succeeded
+ [Finished: './succeeding/exceptions/explicit' All tests passed (3 assertions in 1 test case)]
+ 
+ [Running: ./failing/exceptions/explicit]
+-ExceptionTests.cpp:43: thisThrows() failed with unexpected exception with message: 'expected exception'
+-ExceptionTests.cpp:44: thisDoesntThrow() failed because no exception was thrown where one was expected
+-ExceptionTests.cpp:45: thisThrows() failed with unexpected exception with message: 'expected exception'
++ExceptionTests.cpp:40: thisThrows() failed with unexpected exception with message: 'expected exception'
++ExceptionTests.cpp:41: thisDoesntThrow() failed because no exception was thrown where one was expected
++ExceptionTests.cpp:42: thisThrows() failed with unexpected exception with message: 'expected exception'
+ [Finished: './failing/exceptions/explicit' 1 test case failed (All 3 assertions failed)]
+ 
+ [Running: ./failing/exceptions/implicit]
+-ExceptionTests.cpp:48: Unexpected exception with message: 'unexpected exception'
++ExceptionTests.cpp:45: Unexpected exception with message: 'unexpected exception'
+ [Finished: './failing/exceptions/implicit' 1 test case failed (1 assertion failed)]
+ 
+ [Running: ./failing/exceptions/implicit/2]
+-ExceptionTests.cpp:56: 1 == 1 succeeded
+-ExceptionTests.cpp:56: {Unknown expression after the reported line} failed with unexpected exception with message: 'unexpected exception'
++ExceptionTests.cpp:53: 1 == 1 succeeded
++ExceptionTests.cpp:53: {Unknown expression after the reported line} failed with unexpected exception with message: 'unexpected exception'
+ [Finished: './failing/exceptions/implicit/2' 1 test case failed (1 of 2 assertions failed)]
+ 
+ [Running: ./failing/exceptions/implicit/3]
+ 
+ [Started section: 'section name']
+-ExceptionTests.cpp:62: Unexpected exception with message: 'unexpected exception'
++ExceptionTests.cpp:59: Unexpected exception with message: 'unexpected exception'
+ [End of section: 'section name' 1 assertion failed]
+ 
+ [Finished: './failing/exceptions/implicit/3' 1 test case failed (1 assertion failed)]
+ 
+ [Running: ./failing/exceptions/implicit/4]
+-ExceptionTests.cpp:71: thisThrows() == 0 failed with unexpected exception with message: 'expected exception'
++ExceptionTests.cpp:68: thisThrows() == 0 failed with unexpected exception with message: 'expected exception'
+ [Finished: './failing/exceptions/implicit/4' 1 test case failed (1 assertion failed)]
+ 
+ [Running: ./succeeding/exceptions/implicit]
+@@ -12577,19 +12577,19 @@
+ [Finished: './succeeding/exceptions/implicit' 1 test case failed (1 assertion failed)]
+ 
+ [Running: ./failing/exceptions/custom]
+-ExceptionTests.cpp:112: Unexpected exception with message: 'custom exception'
++ExceptionTests.cpp:108: Unexpected exception with message: 'custom exception'
+ [Finished: './failing/exceptions/custom' 1 test case failed (1 assertion failed)]
+ 
+ [Running: ./failing/exceptions/custom/nothrow]
+-ExceptionTests.cpp:122: throw CustomException( "unexpected custom exception" ) failed with unexpected exception with message: 'unexpected custom exception'
++ExceptionTests.cpp:121: throwCustom() failed with unexpected exception with message: 'custom exception - not std'
+ [Finished: './failing/exceptions/custom/nothrow' 1 test case failed (1 assertion failed)]
+ 
+ [Running: ./failing/exceptions/custom/throw]
+-ExceptionTests.cpp:127: throw CustomException( "custom exception - not std" ) failed with unexpected exception with message: 'custom exception - not std'
++ExceptionTests.cpp:126: throwCustom() failed with unexpected exception with message: 'custom exception - not std'
+ [Finished: './failing/exceptions/custom/throw' 1 test case failed (1 assertion failed)]
+ 
+ [Running: ./failing/exceptions/custom/double]
+-ExceptionTests.cpp:131: Unexpected exception with message: '3.14'
++ExceptionTests.cpp:130: Unexpected exception with message: '3.14'
+ [Finished: './failing/exceptions/custom/double' 1 test case failed (1 assertion failed)]
+ 
+ [Running: ./succeeding/exceptions/notimplemented]
+diff --git a/mdsnippets.json b/mdsnippets.json
+new file mode 100644
+index 0000000..5a60dad
+--- /dev/null
++++ b/mdsnippets.json
+@@ -0,0 +1,9 @@
++{
++  "ReadOnly": false,
++  "TocLevel": 5,
++  "Exclude": [
++    "cmake-build"
++  ],
++  "WriteHeader": false,
++  "Convention": "InPlaceOverwrite"
++}
+diff --git a/tools/scripts/updateDocumentSnippets.py b/tools/scripts/updateDocumentSnippets.py
+new file mode 100755
+index 0000000..a070eea
+--- /dev/null
++++ b/tools/scripts/updateDocumentSnippets.py
+@@ -0,0 +1,23 @@
++#!/usr/bin/env python3
++
++from scriptCommon import catchPath
++import os
++import subprocess
++
++# ---------------------------------------------------
++# Update code examples
++# ---------------------------------------------------
++# For info on mdsnippets, see https://github.com/SimonCropp/MarkdownSnippets
++
++# install dotnet SDK from http://go.microsoft.com/fwlink/?LinkID=798306&clcid=0x409
++# Then install MarkdownSnippets.Tool with
++#   dotnet tool install -g MarkdownSnippets.Tool
++# To update:
++#   dotnet tool update  -g MarkdownSnippets.Tool
++# To uninstall (e.g. to downgrade to a lower version)
++# dotnet tool uninstall -g MarkdownSnippets.Tool
++
++os.chdir(catchPath)
++
++subprocess.run('dotnet tool update  -g MarkdownSnippets.Tool --version 21.2.0', shell=True, check=True)
++subprocess.run('mdsnippets', shell=True, check=True)
+diff --git a/tools/scripts/approvalTests.py b/tools/scripts/approvalTests.py
+index faedce7..f8b9425 100755
+--- a/tools/scripts/approvalTests.py
++++ b/tools/scripts/approvalTests.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from __future__ import print_function
+ 
+diff --git a/tools/scripts/approve.py b/tools/scripts/approve.py
+index 252d08e..997b8c7 100755
+--- a/tools/scripts/approve.py
++++ b/tools/scripts/approve.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ 
+diff --git a/tools/scripts/benchmarkCompile.py b/tools/scripts/benchmarkCompile.py
+index 586c26a..34113b9 100755
+--- a/tools/scripts/benchmarkCompile.py
++++ b/tools/scripts/benchmarkCompile.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from __future__ import print_function
+ 
+diff --git a/tools/scripts/developBuild.py b/tools/scripts/developBuild.py
+index a8115fe..9252c7d 100755
+--- a/tools/scripts/developBuild.py
++++ b/tools/scripts/developBuild.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import releaseCommon
+diff --git a/tools/scripts/embedClara.py b/tools/scripts/embedClara.py
+index 7ceb3e3..d8c1520 100755
+--- a/tools/scripts/embedClara.py
++++ b/tools/scripts/embedClara.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ # Execute this script any time you import a new copy of Clara into the third_party area
+ import os
+diff --git a/tools/scripts/extractFeaturesFromReleaseNotes.py b/tools/scripts/extractFeaturesFromReleaseNotes.py
+index 090f477..11f4955 100644
+--- a/tools/scripts/extractFeaturesFromReleaseNotes.py
++++ b/tools/scripts/extractFeaturesFromReleaseNotes.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ #
+ # extractFeaturesFromReleaseNotes.py
+diff --git a/tools/scripts/fixWhitespace.py b/tools/scripts/fixWhitespace.py
+index bfa4aa0..4591c1c 100755
+--- a/tools/scripts/fixWhitespace.py
++++ b/tools/scripts/fixWhitespace.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import os
+diff --git a/tools/scripts/generateSingleHeader.py b/tools/scripts/generateSingleHeader.py
+index f896877..0de1a63 100755
+--- a/tools/scripts/generateSingleHeader.py
++++ b/tools/scripts/generateSingleHeader.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from __future__ import print_function
+ 
+diff --git a/tools/scripts/majorRelease.py b/tools/scripts/majorRelease.py
+index 8da3406..e9e285a 100755
+--- a/tools/scripts/majorRelease.py
++++ b/tools/scripts/majorRelease.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import releaseCommon
+diff --git a/tools/scripts/minorRelease.py b/tools/scripts/minorRelease.py
+index 6e71cd8..2b57c2e 100755
+--- a/tools/scripts/minorRelease.py
++++ b/tools/scripts/minorRelease.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import releaseCommon
+diff --git a/tools/scripts/patchRelease.py b/tools/scripts/patchRelease.py
+index 1417642..d20db71 100755
+--- a/tools/scripts/patchRelease.py
++++ b/tools/scripts/patchRelease.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from  __future__ import  print_function
+ import releaseCommon
+diff --git a/tools/scripts/releaseNotes.py b/tools/scripts/releaseNotes.py
+index 5e770bb..7f580e9 100755
+--- a/tools/scripts/releaseNotes.py
++++ b/tools/scripts/releaseNotes.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ from __future__ import print_function
+ 
+diff --git a/tools/scripts/updateDocumentToC.py b/tools/scripts/updateDocumentToC.py
+index 325c8a3..41b4875 100644
+--- a/tools/scripts/updateDocumentToC.py
++++ b/tools/scripts/updateDocumentToC.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ #
+ # updateDocumentToC.py
+diff --git a/tools/scripts/updateWandbox.py b/tools/scripts/updateWandbox.py
+index fa25ef1..3668da5 100644
+--- a/tools/scripts/updateWandbox.py
++++ b/tools/scripts/updateWandbox.py
+@@ -3,10 +3,14 @@
+ import json
+ import os
+ import urllib.request
++import urllib.parse
++
+ 
+ from scriptCommon import catchPath
+ 
+ def upload(options):
++#    request_blah = urllib.request.Request('https://
++
+     request = urllib.request.Request('https://melpon.org/wandbox/api/compile.json', method='POST')
+     json_bytes = json.dumps(options).encode('utf-8')
+     request.add_header('Content-Type', 'application/json; charset=utf-8')
+diff --git a/tools/scripts/updateWandbox.py b/tools/scripts/updateWandbox.py
+index b448713..fa25ef1 100644
+--- a/tools/scripts/updateWandbox.py
++++ b/tools/scripts/updateWandbox.py
+@@ -1,16 +1,18 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ 
+ import json
+ import os
+-import urllib2
++import urllib.request
+ 
+ from scriptCommon import catchPath
+ 
+ def upload(options):
+-    request = urllib2.Request('http://melpon.org/wandbox/api/compile.json')
+-    request.add_header('Content-Type', 'application/json')
+-    response = urllib2.urlopen(request, json.dumps(options))
+-    return json.loads(response.read())
++    request = urllib.request.Request('https://melpon.org/wandbox/api/compile.json', method='POST')
++    json_bytes = json.dumps(options).encode('utf-8')
++    request.add_header('Content-Type', 'application/json; charset=utf-8')
++    request.add_header('Content-Length', len(json_bytes))
++    response = urllib.request.urlopen(request, json_bytes)
++    return json.loads(response.read().decode('utf-8'))
+ 
+ main_file = '''
+ #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file

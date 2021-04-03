@@ -1,0 +1,21 @@
+package GitTools.GitRepoAnalysis;
+
+import java.io.File;
+import java.util.List;
+
+public class GitRepositoryAnalysisTools {
+
+	public GitRepository gr;	
+	public List<String> fileNames;
+	
+	public void initListFileNames(final File folder) {	
+	    for (final File fileEntry : gr.jgitRepository.getDirectory().listFiles()) {
+	        if (fileEntry.isDirectory()) {
+	        	initListFileNames(fileEntry);
+	        } else {
+	            fileNames.add(fileEntry.getName());
+	        }
+	    }
+	}
+	
+}

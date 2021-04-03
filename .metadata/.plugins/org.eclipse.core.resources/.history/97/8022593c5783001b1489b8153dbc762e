@@ -1,0 +1,95 @@
+package GitTools.GitRepoAnalysis;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.stream.Stream;
+
+import org.eclipse.jgit.blame.BlameResult;
+
+public class GitRepositoryAnalysisTools {
+
+	static long maxTimePeriode = 2592000000L * 6;
+	
+	public GitRepository gr = new GitRepository();	
+	public List<String> fileNames = new ArrayList<String>();
+	
+	public void initListFileNames(final File folder) {	
+	    for (final File fileEntry : folder.listFiles()) {
+	        if (fileEntry.isDirectory()) {
+	        	initListFileNames(fileEntry);
+	        } else {
+	            fileNames.add(fileEntry.getAbsolutePath().replace("\\", "/"));
+	        }
+	    }
+	}
+	
+	public static int countLinesNew(String filename) throws IOException {
+        try (Stream<String> fileStream = Files.lines(Paths.get(filename))) {
+        	return (int) fileStream.count();
+        }
+        catch (Exception e)
+        {
+        	System.out.println("countLinesNew exception");
+        	return 0;
+        }
+	}
+	
+	public int calculateKnownLinesPercentInFile(String fileName, File repo, int length) throws Exception
+	{
+    	BlameResult br = gr.getBlameResultForFile(fileName.replace(repo.getAbsolutePath().replace("\\", "/") + "/", ""));
+    	int countKnownLines = 0;
+     	int i = 0;
+     	Date d = new Date(System.currentTimeMillis() - maxTimePeriode);
+     	
+     	try {
+     		while (length > i)
+        	{     
+        		if (d.before(br.getSourceCommitter(i).getWhen()))
+        		{
+        			countKnownLines++;
+        		}
+        		
+        		i++;
+        	}
+     	}catch(Exception e)
+     	{
+     		System.out.println("getSourceCommitter exception");
+     		if (i == 0)
+     			length = 0;
+     	}
+    	
+    	return (length == 0) ? -1 : countKnownLines*100 / length; // пустые и автосгенерированные файлы при подсчёте не учитываем
+	}
+	
+	public int calculateTotalUnknownLinesPercent(File repo) throws Exception
+	{
+		int calc;
+		int calcTotal = 0;
+		int linesTotal = 0;
+		int linesNumber = 0;
+    	gr.init(repo.getAbsolutePath());
+    	initListFileNames(repo);
+    	for(String fileName : fileNames)
+    	{
+    			linesNumber = countLinesNew(fileName);
+    			calc = calculateKnownLinesPercentInFile(fileName, repo, linesNumber);
+    			if (calc != -1)
+    			{
+        			System.out.println("Percent of known lines in file " + fileName + ": " + calc);
+        			
+        			calcTotal = calcTotal + calc * linesNumber / 100;
+        			linesTotal = linesTotal + linesNumber;
+        			System.out.println(calcTotal);
+        			System.out.println(linesTotal);
+    			}
+    	}
+    	
+    	return (linesTotal == 0)? 100 :calcTotal * 100 / linesTotal;
+	}
+	
+}

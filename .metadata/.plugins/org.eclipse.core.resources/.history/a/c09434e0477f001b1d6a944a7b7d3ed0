@@ -1,0 +1,26 @@
+package GitTools.GitRepoAnalysis;
+
+import java.io.File;
+
+import org.eclipse.jgit.blame.BlameResult;
+
+public class App 
+{	
+	
+    public static void main( String[] args ) throws Exception
+    {
+    	GitRepository gr = new GitRepository();
+    	gr.init("C:/Users/MiPro/LetsDoStuff5");//("C:/Users/MiPro/Computer-graphics");
+    	BlameResult br = gr.getBlameResultForFile("LetsDoStuff.Domain/LdsContext.cs");
+    	File f = new File("C:/Users/MiPro/LetsDoStuff5/LetsDoStuff.Domain/LdsContext.cs");
+    	long length = f.length();
+     	int i = 0;
+    	do
+    	{    		
+    		System.out.println(br.getSourceCommitter(i).getName());
+    		System.out.println(br.getSourceCommit(i).getCommitTime());
+    		i++;
+    	}while (length > i);//(br.getSourceCommit(i) != null);
+    	
+    }
+}

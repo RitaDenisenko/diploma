@@ -1,0 +1,19 @@
+package GitTools.GitRepoAnalysis;
+
+import java.io.File;
+
+public class App 
+{		
+	
+	
+    public static void main( String[] args ) throws Exception
+    {
+    	GitRepositoryAnalysisTools g = new GitRepositoryAnalysisTools();
+    	File repository = new File("C:/Users/MiPro/LetsDoStuff5");
+    	System.out.println(repository.getAbsolutePath());
+    	g.calculateTotalUnknownLinesPercent(repository);
+    	//GitRepository gr = new GitRepository();
+    	//gr.init(repository.getAbsolutePath());
+    	
+    }
+}

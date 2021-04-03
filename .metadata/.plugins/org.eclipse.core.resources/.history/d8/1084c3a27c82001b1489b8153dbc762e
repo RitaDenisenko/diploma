@@ -1,0 +1,45 @@
+package GitTools.GitRepoAnalysis;
+
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.InputStream;
+import java.io.LineNumberReader;
+
+public class App 
+{		
+	
+	
+    public static void main( String[] args ) throws Exception
+    {
+    	GitRepositoryAnalysisTools g = new GitRepositoryAnalysisTools();
+    	File repository = new File("C:/Users/MiPro/LetsDoStuff5");
+    	System.out.println(repository.getAbsolutePath());
+    	//g.calculateTotalUnknownLinesPercent(repository);
+
+    	InputStream is = new BufferedInputStream(new FileInputStream("C:/Users/MiPro/LetsDoStuff5/COMMIT_EDITMSG"));
+	    try {
+	        byte[] c = new byte[1024];
+	        int count = 0;
+	        int readChars = 0;
+	        boolean empty = true;
+	        while ((readChars = is.read(c)) != -1) {
+	            empty = false;
+	            for (int i = 0; i < readChars; ++i) {
+	                if (c[i] == '\n') {
+	                    ++count;
+	                }
+	            }
+	        }
+	        System.out.println ((count == 0 && !empty) ? 1 : count);
+	    } finally {
+	        is.close();
+	    }
+    	//GitRepositoryAnalysisTools.countLinesNew("C:\\Users\\MiPro\\LetsDoStuff5\\COMMIT_EDITMSG");
+    	
+    	//GitRepository gr = new GitRepository();
+    	//gr.init(repository.getAbsolutePath());
+    	
+    }
+}

@@ -1,0 +1,154 @@
+package GitTools.GitRepoAnalysis;
+
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.eclipse.jgit.blame.BlameResult;
+
+public class GitRepositoryAnalysisTools {
+
+	static long maxTimePeriode = 2592000000L * 1;
+	//static String gitIgnoreFileName = "\\.gitignore";
+	
+	public GitRepository gr = new GitRepository();	
+	public List<String> fileNames = new ArrayList<String>();
+	
+	public void initListFileNames(final File folder) {	
+	    for (final File fileEntry : folder.listFiles()) {
+	        if (fileEntry.isDirectory()) {
+	        	initListFileNames(fileEntry);
+	        } else {
+	            fileNames.add(fileEntry.getAbsolutePath().replace(folder.getAbsolutePath(), ""));
+	        }
+	    }
+	}
+	
+	public static int countLinesNew(String filename) throws IOException {
+		File file = new File(filename); 
+
+		if(!file.exists()) {
+		    file.createNewFile();
+		} 
+
+		
+	    InputStream is = new BufferedInputStream(new FileInputStream(file));
+	    //try {
+	        byte[] c = new byte[1024];
+
+	        int readChars = is.read(c);
+	        if (readChars == -1) {
+	            return 0;
+	        }
+
+	        int count = 0;
+	        while (readChars == 1024) {
+	            for (int i=0; i<1024;) {
+	                if (c[i++] == '\n') {
+	                    ++count;
+	                }
+	            }
+	            readChars = is.read(c);
+	        }
+
+	        while (readChars != -1) {
+	            //System.out.println(readChars);
+	            for (int i=0; i<readChars; ++i) {
+	                if (c[i] == '\n') {
+	                    ++count;
+	                }
+	            }
+	            readChars = is.read(c);
+	        }
+	        is.close();
+	        return count == 0 ? 1 : count;
+	    //} finally {
+	        //is.close();
+	    //}
+	}
+	
+	public int calculateKnownLinesPercentInFile(String fileName, File repo) throws Exception
+	{
+    	BlameResult br = gr.getBlameResultForFile(repo.getAbsolutePath() + fileName);
+    	int countKnownLines = 0;
+    	int length = countLinesNew(repo.getAbsolutePath() + fileName);
+     	int i = 0;
+     	Date d = new Date(System.currentTimeMillis() - maxTimePeriode);
+     	
+     	try {
+     		System.out.println("before while");
+     		System.out.println("i="+i+" length="+length+" file="+fileName);
+     		while (length > i)
+        	{     
+     			System.out.println("while");
+        		System.out.println(br.getSourceCommitter(i).getName());
+        		System.out.println(br.getSourceCommitter(i).getWhen());
+        		if (d.before(br.getSourceCommitter(i).getWhen()))
+        		{
+        			System.out.println("d="+d+" commit_date="+br.getSourceCommitter(i).getWhen());
+        			countKnownLines++;
+        		}
+        		
+        		i++;
+        	}
+     	}catch(Exception e)
+     	{
+     		System.out.println("length="+length+" file="+fileName);
+     		length = 0;
+     	}
+     	
+    	
+    	//initListFileNames("C:/Users/MiPro/LetsDoStuff5");
+    	
+    	return (length == 0) ? 100 : countKnownLines*100 / length;
+	}
+	
+	public int calculateTotalUnknownLinesPercent(File repo) throws Exception
+	{
+		int calc;
+    	gr.init(repo.getAbsolutePath());//("C:/Users/MiPro/Computer-graphics");
+    	initListFileNames(repo);
+    	for(String fileName : fileNames)
+    	{
+    		//try {
+    			calc = calculateKnownLinesPercentInFile(fileName, repo);
+        		System.out.println("Percent of known lines in file " + fileName + ": " + calc);
+    		//}
+    		/*catch(Exception e)
+    		{
+    			System.out.println("Exception! "+ "File: " +fileName+"; Repo: "+ repo);
+    		}*/
+    		
+    	}
+    	
+    	return 0;
+    	/*
+    	BlameResult br = gr.getBlameResultForFile("LetsDoStuff.Domain/LdsContext.cs");
+    	int countKnownLines = 0;
+    	int length = countLinesNew("C:/Users/MiPro/LetsDoStuff5/LetsDoStuff.Domain/LdsContext.cs");
+     	int i = 0;
+     	Date d = new Date(System.currentTimeMillis() - maxTimePeriode);
+     	while (length > i)
+    	{    		
+    		System.out.println(br.getSourceCommitter(i).getName());
+    		System.out.println(br.getSourceCommitter(i).getWhen());
+    		if (d.before(br.getSourceCommitter(i).getWhen()))
+    		{
+    			countKnownLines++;
+    		}
+    		
+    		i++;
+    	};
+    	
+    	System.out.println(countKnownLines*100 / length);
+    	
+    	
+    	initListFileNames("C:/Users/MiPro/LetsDoStuff5");*/
+	}
+	
+}

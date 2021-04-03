@@ -1,0 +1,24 @@
+package GitTools.GitRepoAnalysis;
+
+import java.io.File;
+
+import org.eclipse.jgit.api.Git;
+
+public class App 
+{		
+	
+	
+    public static void main( String[] args ) throws Exception
+    {
+    	Git git = Git.cloneRepository()
+    			  .setURI( "https://github.com/RitaDenisenko/PeopleTask.git" )
+    			  .call();
+    	
+    	System.out.println(git.getRepository().getDirectory().getAbsolutePath());
+    	GitRepositoryAnalysisTools g = new GitRepositoryAnalysisTools();
+    	File repository = new File("C:/Users/MiPro/LetsDoStuff");
+    	System.out.println(repository.getAbsolutePath());
+    	System.out.println("Total percent of known lines: " + g.calculateTotalUnknownLinesPercent(repository));
+    	
+    }
+}

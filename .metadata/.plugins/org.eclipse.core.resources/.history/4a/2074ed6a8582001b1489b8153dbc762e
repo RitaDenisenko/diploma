@@ -1,0 +1,88 @@
+package GitTools.GitRepoAnalysis;
+
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.InputStream;
+import java.io.LineNumberReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Date;
+import java.util.stream.Stream;
+
+import org.eclipse.jgit.blame.BlameResult;
+
+public class App 
+{		
+	
+	
+    public static void main( String[] args ) throws Exception
+    {
+    	GitRepositoryAnalysisTools g = new GitRepositoryAnalysisTools();
+    	File repository = new File("C:/Users/MiPro/LetsDoStuff");
+    	System.out.println(repository.getAbsolutePath());
+    	//g.calculateTotalUnknownLinesPercent(repository);
+
+    	
+    	
+    	/*GitRepository gr = new GitRepository();
+    	gr.init(repository.getAbsolutePath());
+    	BlameResult br = gr.getBlameResultForFile("LetsDoStuff.Domain\\Models\\User.cs");
+    	//int countKnownLines = 0;
+    	int length = GitRepositoryAnalysisTools.countLinesNew("C:\\Users\\MiPro\\LetsDoStuff\\LetsDoStuff.Domain\\Models\\User.cs");
+    	//System.out.println(length);
+     	int i = 0;
+     	//Date d = new Date(System.currentTimeMillis() - 2592000000L * 2);
+     	
+
+     		while (length > i)
+        	{     
+     			//System.out.println("while");
+        		System.out.println(br.getSourceCommitter(i));
+        		//System.out.println(br.getSourceCommitter(i).getWhen());
+        		/*if (d.before(br.getSourceCommitter(i).getWhen()))
+        		{
+        			//System.out.println("d="+d+" commit_date="+br.getSourceCommitter(i).getWhen());
+        			countKnownLines++;
+        		}
+        		
+        		i++;
+        	}
+    	*/
+    	
+    	/*
+        try (Stream<String> fileStream = Files.lines(Paths.get("C:\\Users\\MiPro\\LetsDoStuff5\\LetsDoStuff.Domain\\LdsContext.cs"))) {
+        	System.out.println( (int) fileStream.count());
+            //assertEquals(NO_OF_LINES, noOfLines);
+        }
+    	*/
+    	
+    	/*InputStream is = new BufferedInputStream(new FileInputStream("C:\\Users\\MiPro\\LetsDoStuff5\\LdsContext.cs"));
+    	try {
+            byte[] c = new byte[1024];
+            int count = 0;
+            int readChars = 0;
+            boolean empty = true;
+            while ((readChars = is.read(c)) != -1) {
+                empty = false;
+                for (int i = 0; i < readChars; ++i) {
+                    if (c[i] == '\n') {
+                        ++count;
+                    }
+                }
+            }
+            System.out.println((count == 0 && !empty) ? 1 : count);
+        } finally {
+            is.close();
+        }
+        */
+        
+        
+    	//GitRepositoryAnalysisTools.countLinesNew("C:\\Users\\MiPro\\LetsDoStuff5\\COMMIT_EDITMSG");
+    	
+    	//GitRepository gr = new GitRepository();
+    	//gr.init(repository.getAbsolutePath());
+    	
+    }
+}
