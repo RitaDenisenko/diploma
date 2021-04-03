@@ -187,15 +187,15 @@ public class GitRepositoryAnalysisTools {
         			
         			calcTotal = calcTotal + calc * linesNumber / 100;
         			linesTotal = linesTotal + linesNumber;
-        			//System.out.println("Known: "+calcTotal);
-        			//System.out.println("Total: "+linesTotal);
+        			System.out.println("Known: "+calcTotal);
+        			System.out.println("Total: "+linesTotal);
     			}
     	}
     	
     	return (linesTotal == 0)? 100 :calcTotal * 100 / linesTotal;
 	}
 	
-	private Boolean diffForInitCommitContainsThisLineOrNearestLines(RevCommit commit, File repo, String filePath, int lineNumber) throws IncorrectObjectTypeException, IOException
+	private Boolean diffForInitCommitContainsThisLineOrNearestLines(RevCommit commit, File repo, String filePath, int lineNumber)
 	{
 		Git git = new Git(gr.jgitRepository);
 		
@@ -207,7 +207,15 @@ public class GitRepositoryAnalysisTools {
 		AbstractTreeIterator oldTreeIter = new EmptyTreeIterator();
 		ObjectReader reader = gr.jgitRepository.newObjectReader();
 		AbstractTreeIterator newTreeIter = new CanonicalTreeParser(null, reader, commit.getTree());
-		for (DiffEntry entry : df.scan(oldTreeIter, newTreeIter)) {
+		List<DiffEntry> diffEntries = df.scan(oldTreeIter, newTreeIter);
+		/*Git git = new Git(gr.jgitRepository);
+		
+		File tempFile = new File("temp.txt");
+		tempFile.createNewFile(); // if file already exists will do nothing 
+		FileOutputStream oFile = new FileOutputStream(tempFile, true); 
+	    DiffFormatter df = new DiffFormatter(oFile);
+		df.setRepository( git.getRepository() );
+        for (DiffEntry entry : df.scan(commit)) {
         	df.format(df.toFileHeader(entry));
         }
         
@@ -251,7 +259,7 @@ public class GitRepositoryAnalysisTools {
         	
         }
         
-		return false;
+		return false;*/
 	}
 	
 	//ok

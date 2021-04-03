@@ -187,8 +187,8 @@ public class GitRepositoryAnalysisTools {
         			
         			calcTotal = calcTotal + calc * linesNumber / 100;
         			linesTotal = linesTotal + linesNumber;
-        			//System.out.println("Known: "+calcTotal);
-        			//System.out.println("Total: "+linesTotal);
+        			System.out.println("Known: "+calcTotal);
+        			System.out.println("Total: "+linesTotal);
     			}
     	}
     	

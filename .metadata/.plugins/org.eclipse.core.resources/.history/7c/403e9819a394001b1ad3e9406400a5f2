@@ -32,9 +32,7 @@ import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.revwalk.DepthWalk.Commit;
 import org.eclipse.jgit.revwalk.RevCommit;
 import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
-import org.eclipse.jgit.treewalk.AbstractTreeIterator;
 import org.eclipse.jgit.treewalk.CanonicalTreeParser;
-import org.eclipse.jgit.treewalk.EmptyTreeIterator;
 import org.eclipse.jgit.util.io.NullOutputStream;
 
 public class GitRepositoryAnalysisTools {
@@ -187,71 +185,17 @@ public class GitRepositoryAnalysisTools {
         			
         			calcTotal = calcTotal + calc * linesNumber / 100;
         			linesTotal = linesTotal + linesNumber;
-        			//System.out.println("Known: "+calcTotal);
-        			//System.out.println("Total: "+linesTotal);
+        			System.out.println("Known: "+calcTotal);
+        			System.out.println("Total: "+linesTotal);
     			}
     	}
     	
     	return (linesTotal == 0)? 100 :calcTotal * 100 / linesTotal;
 	}
 	
-	private Boolean diffForInitCommitContainsThisLineOrNearestLines(RevCommit commit, File repo, String filePath, int lineNumber) throws IncorrectObjectTypeException, IOException
+	private Boolean diffForInitCommitContainsThisLineOrNearestLines(RevCommit commit, File repo, String filePath, int lineNumber)
 	{
-		Git git = new Git(gr.jgitRepository);
 		
-		File tempFile = new File("temp.txt");
-		tempFile.createNewFile(); // if file already exists will do nothing 
-		FileOutputStream oFile = new FileOutputStream(tempFile, true); 
-	    DiffFormatter df = new DiffFormatter(oFile);
-		df.setRepository( git.getRepository() );
-		AbstractTreeIterator oldTreeIter = new EmptyTreeIterator();
-		ObjectReader reader = gr.jgitRepository.newObjectReader();
-		AbstractTreeIterator newTreeIter = new CanonicalTreeParser(null, reader, commit.getTree());
-		for (DiffEntry entry : df.scan(oldTreeIter, newTreeIter)) {
-        	df.format(df.toFileHeader(entry));
-        }
-        
-        String content = readAllBytesJava7(tempFile.getAbsolutePath());
-        
-        tempFile.delete();
-        
-        int fileNamePosition = content.indexOf(filePath.replace(repo.getAbsolutePath().replace("\\", "/") + "/", ""));
-        int atSymbolsPosition1, atSymbolsPosition2, nextFileDiffPosition;
-        String substringWithLineNumbers;
-        
-        //System.out.println(filePath.replace(repo.getAbsolutePath().replace("\\", "/") + "/", ""));
-        //System.out.println(fileNamePosition);
-        //System.out.println(content);
-        if (fileNamePosition!=-1)
-        {
-        	//System.out.println("(fileNamePosition!=-1)");
-        	nextFileDiffPosition = content.indexOf("diff --git");
-        	atSymbolsPosition1 = content.indexOf("@@", fileNamePosition);
-        	atSymbolsPosition2 = content.indexOf("@@", atSymbolsPosition1+2);
-        	substringWithLineNumbers = content.substring(atSymbolsPosition1+2, atSymbolsPosition2-1);
-        	
-        	if(containsThisOrNearestLine(substringWithLineNumbers, lineNumber))
-        		return true;
-        	
-        	Boolean ok = true;
-        	while(ok)
-        	{
-        		atSymbolsPosition1 = content.indexOf("@@", atSymbolsPosition2+2);
-        		if (atSymbolsPosition1 < nextFileDiffPosition & atSymbolsPosition1 != -1)
-        		{
-        			atSymbolsPosition2 = content.indexOf("@@", atSymbolsPosition1+2);
-                	substringWithLineNumbers = content.substring(atSymbolsPosition1+2, atSymbolsPosition2-1);
-                	if(containsThisOrNearestLine(substringWithLineNumbers, lineNumber))
-                		return true;
-                	
-        		}else
-        			return false;            	
-        	}
-        	
-        	
-        }
-        
-		return false;
 	}
 	
 	//ok
