@@ -2390,3 +2390,550 @@
 2021-04-03 20:41:20,997 [Worker-560: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
 2021-04-03 20:41:20,997 [Worker-560: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-04-03 20:41:20,997 [Worker-560: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 14:32:27,693 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2021-04-17 14:32:30,096 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 14:32:30,097 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 14:32:30,101 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 14:32:30,101 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 14:41:55,950 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 14:41:55,951 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 14:41:55,954 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 14:41:55,954 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 14:42:36,111 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 14:42:36,111 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 14:42:36,112 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 14:42:36,112 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 14:42:41,053 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 14:42:41,054 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 14:42:41,056 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 14:42:41,057 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 14:45:41,130 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 14:45:41,131 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 14:45:41,132 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 14:45:41,132 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 14:46:04,127 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 14:46:04,127 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 14:46:04,127 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 14:46:04,128 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 14:47:54,458 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 14:47:54,459 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 14:47:54,460 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 14:47:54,460 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 14:55:04,702 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 14:55:04,702 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 14:55:04,704 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 14:55:04,704 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 14:57:51,049 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 14:57:51,049 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 14:57:51,050 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 14:57:51,050 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 15:00:49,720 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:00:49,720 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 15:00:49,721 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:00:49,721 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 15:02:30,702 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:02:30,702 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 15:02:30,703 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:02:30,703 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 15:05:21,209 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:05:21,209 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 15:05:21,211 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:05:21,211 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 15:06:27,684 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:06:27,684 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 15:06:27,685 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:06:27,685 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 15:17:30,637 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:17:30,637 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 15:17:30,638 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:17:30,638 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 15:23:27,593 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:23:27,593 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 15:23:27,594 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:23:27,595 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 15:24:05,494 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:24:05,494 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 15:24:05,496 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:24:05,496 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 15:28:51,345 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:28:51,345 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 15:28:51,346 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:28:51,347 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 15:29:00,747 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:29:00,747 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 15:29:00,748 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:29:00,748 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 15:45:41,678 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:45:41,678 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 15:45:41,679 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:45:41,679 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 15:46:06,396 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:46:06,396 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 15:46:06,397 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:46:06,397 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 15:46:26,503 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:46:26,504 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 15:46:26,505 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:46:26,505 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 15:55:39,874 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:55:39,874 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 15:55:39,875 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:55:39,875 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 15:55:45,732 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:55:45,733 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 15:55:45,734 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:55:45,735 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 15:56:41,449 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:56:41,450 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 15:56:41,452 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 15:56:41,452 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 16:07:17,231 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:07:17,231 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 16:07:17,232 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:07:17,232 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 16:16:47,312 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:16:47,312 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 16:16:47,313 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:16:47,313 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 16:18:46,752 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:18:46,753 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 16:18:46,753 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:18:46,754 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 16:25:33,847 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:25:33,847 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 16:25:33,848 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:25:33,848 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 16:26:54,818 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:26:54,818 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 16:26:54,819 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:26:54,819 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 16:27:13,766 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:27:13,767 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 16:27:13,768 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:27:13,768 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 16:27:31,495 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:27:31,495 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 16:27:31,496 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:27:31,496 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 16:29:39,712 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:29:39,712 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 16:29:39,713 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:29:39,713 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 16:30:15,202 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:30:15,203 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 16:30:15,203 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:30:15,203 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 16:30:31,814 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:30:31,814 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 16:30:31,814 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:30:31,814 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 16:31:17,323 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:31:17,324 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 16:31:17,325 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:31:17,326 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 16:34:25,730 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:34:25,730 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 16:34:25,731 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:34:25,731 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 16:55:54,674 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:55:54,675 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 16:55:54,676 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:55:54,676 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 16:55:58,911 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:55:58,912 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 16:55:58,912 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:55:58,912 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 16:56:40,365 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:56:40,365 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 16:56:40,366 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:56:40,366 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 16:57:46,807 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:57:46,808 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 16:57:46,808 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 16:57:46,808 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:02:25,980 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:02:25,980 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:02:25,981 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:02:25,981 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:02:39,904 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:02:39,904 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:02:39,905 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:02:39,905 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:03:06,758 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:03:06,759 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:03:06,759 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:03:06,759 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:04:01,356 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:04:01,357 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:04:01,358 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:04:01,358 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:04:24,384 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:04:24,384 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:04:24,385 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:04:24,385 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:04:46,999 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:04:46,999 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:04:47,000 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:04:47,000 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:04:55,277 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:04:55,278 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:04:55,279 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:04:55,279 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:05:16,513 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:05:16,513 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:05:16,514 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:05:16,515 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:07:12,641 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:07:12,641 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:07:12,641 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:07:12,642 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:08:33,025 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:08:33,026 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:08:33,028 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:08:33,028 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:09:01,275 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:09:01,276 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:09:01,277 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:09:01,277 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:09:25,083 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:09:25,083 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:09:25,084 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:09:25,084 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:14:55,364 [Worker-71: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:14:55,364 [Worker-71: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:14:55,365 [Worker-71: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:14:55,365 [Worker-71: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:16:01,862 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:16:01,863 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:16:01,863 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:16:01,863 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:16:32,714 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:16:32,714 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:16:32,716 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:16:32,716 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:16:37,268 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:16:37,268 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:16:37,268 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:16:37,269 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:16:49,769 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:16:49,769 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:16:49,770 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:16:49,770 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:17:18,735 [Worker-71: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:17:18,735 [Worker-71: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:17:18,735 [Worker-71: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:17:18,735 [Worker-71: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:17:25,596 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:17:25,596 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:17:25,597 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:17:25,597 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:18:06,181 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:18:06,181 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:18:06,182 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:18:06,182 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:18:13,242 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:18:13,242 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:18:13,243 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:18:13,243 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:19:48,084 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:19:48,085 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:19:48,086 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:19:48,086 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:20:49,154 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:20:49,155 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:20:49,156 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:20:49,156 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:20:58,556 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:20:58,556 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:20:58,557 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:20:58,557 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:21:19,822 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:21:19,822 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:21:19,823 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:21:19,823 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:23:14,417 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:23:14,418 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:23:14,419 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:23:14,419 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:24:52,363 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:24:52,364 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:24:52,365 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:24:52,365 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:26:37,847 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:26:37,847 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:26:37,849 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:26:37,849 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:26:44,829 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:26:44,829 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:26:44,830 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:26:44,830 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:26:59,802 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:26:59,803 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:26:59,805 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:26:59,806 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:27:05,962 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:27:05,962 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:27:05,965 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:27:05,965 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:27:34,971 [Worker-74: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:27:34,971 [Worker-74: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:27:34,974 [Worker-74: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:27:34,974 [Worker-74: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:27:43,830 [Worker-75: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:27:43,830 [Worker-75: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:27:43,833 [Worker-75: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:27:43,833 [Worker-75: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:30:29,441 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:30:29,441 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:30:29,443 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:30:29,443 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:30:41,707 [Worker-76: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:30:41,707 [Worker-76: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:30:41,709 [Worker-76: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:30:41,709 [Worker-76: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:31:02,312 [Worker-76: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:31:02,312 [Worker-76: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:31:02,313 [Worker-76: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:31:02,313 [Worker-76: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:32:32,512 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:32:32,512 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:32:32,513 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:32:32,513 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:33:22,107 [Worker-76: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:33:22,107 [Worker-76: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:33:22,108 [Worker-76: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:33:22,108 [Worker-76: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:33:48,622 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:33:48,623 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:33:48,623 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:33:48,624 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:33:57,955 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:33:57,955 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:33:57,956 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:33:57,956 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:34:12,281 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:34:12,281 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:34:12,282 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:34:12,282 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:34:34,354 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:34:34,355 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:34:34,355 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:34:34,356 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:34:49,286 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:34:49,286 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:34:49,287 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:34:49,287 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:36:46,477 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:36:46,477 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:36:46,478 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:36:46,478 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:37:48,772 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:37:48,772 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:37:48,773 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:37:48,773 [Worker-73: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:38:19,019 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:38:19,019 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:38:19,020 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:38:19,020 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:38:22,288 [Worker-76: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:38:22,288 [Worker-76: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:38:22,289 [Worker-76: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:38:22,289 [Worker-76: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:39:29,140 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:39:29,140 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:39:29,142 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:39:29,142 [Worker-78: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:42:50,703 [Worker-77: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:42:50,704 [Worker-77: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:42:50,707 [Worker-77: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:42:50,707 [Worker-77: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:43:16,540 [Worker-79: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:43:16,540 [Worker-79: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:43:16,540 [Worker-79: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:43:16,541 [Worker-79: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:43:30,292 [Worker-80: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:43:30,293 [Worker-80: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:43:30,294 [Worker-80: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:43:30,294 [Worker-80: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:45:50,056 [Worker-82: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:45:50,056 [Worker-82: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:45:50,057 [Worker-82: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:45:50,057 [Worker-82: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:48:07,106 [Worker-82: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:48:07,106 [Worker-82: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:48:07,107 [Worker-82: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:48:07,107 [Worker-82: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:48:28,601 [Worker-77: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:48:28,601 [Worker-77: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:48:28,601 [Worker-77: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:48:28,602 [Worker-77: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:57:20,158 [Worker-80: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:57:20,159 [Worker-80: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:57:20,160 [Worker-80: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:57:20,160 [Worker-80: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:57:39,852 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:57:39,852 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:57:39,853 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:57:39,853 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:57:52,808 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:57:52,808 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:57:52,809 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:57:52,809 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:58:13,447 [Worker-83: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:58:13,447 [Worker-83: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:58:13,447 [Worker-83: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:58:13,448 [Worker-83: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 17:58:51,959 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:58:51,959 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 17:58:51,960 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 17:58:51,960 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:00:03,211 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:00:03,211 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:00:03,212 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:00:03,212 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:00:21,743 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:00:21,743 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:00:21,744 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:00:21,744 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:00:57,487 [Worker-89: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:00:57,487 [Worker-89: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:00:57,488 [Worker-89: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:00:57,488 [Worker-89: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:01:31,818 [Worker-89: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:01:31,818 [Worker-89: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:01:31,820 [Worker-89: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:01:31,820 [Worker-89: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:03:22,514 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:03:22,514 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:03:22,515 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:03:22,515 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:04:51,041 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:04:51,041 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:04:51,042 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:04:51,043 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:04:55,432 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:04:55,433 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:04:55,433 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:04:55,434 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:08:33,581 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:08:33,581 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:08:33,582 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:08:33,582 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:08:52,964 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:08:52,964 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:08:52,965 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:08:52,965 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:09:01,670 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:09:01,670 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:09:01,671 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:09:01,671 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:10:22,583 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:10:22,583 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:10:22,583 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:10:22,583 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:13:24,064 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:13:24,064 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:13:24,065 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:13:24,065 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:13:36,385 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:13:36,385 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:13:36,387 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:13:36,387 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:14:00,409 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:14:00,410 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:14:00,410 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:14:00,410 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:14:40,782 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:14:40,782 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:14:40,783 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:14:40,783 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:14:55,342 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:14:55,342 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:14:55,343 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:14:55,343 [Worker-86: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:15:05,542 [Worker-92: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:15:05,542 [Worker-92: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:15:05,543 [Worker-92: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:15:05,543 [Worker-92: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:15:12,144 [Worker-92: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:15:12,144 [Worker-92: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:15:12,145 [Worker-92: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:15:12,145 [Worker-92: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:16:22,811 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:16:22,811 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:16:22,811 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:16:22,811 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:16:28,501 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:16:28,501 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:16:28,502 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:16:28,502 [Worker-88: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:16:30,667 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:16:30,667 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:16:30,668 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:16:30,668 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:17:23,495 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:17:23,495 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:17:23,496 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:17:23,496 [Worker-87: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:18:14,706 [Worker-92: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:18:14,706 [Worker-92: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:18:14,707 [Worker-92: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:18:14,707 [Worker-92: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:31:52,543 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:31:52,543 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:31:52,544 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:31:52,544 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:31:58,019 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:31:58,019 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:31:58,020 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:31:58,020 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:32:24,747 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:32:24,748 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:32:24,749 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:32:24,749 [Worker-85: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:33:52,246 [Worker-105: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:33:52,246 [Worker-105: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:33:52,247 [Worker-105: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:33:52,248 [Worker-105: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:41:18,932 [Worker-109: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:41:18,932 [Worker-109: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:41:18,932 [Worker-109: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:41:18,933 [Worker-109: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 18:45:03,920 [Worker-108: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:45:03,920 [Worker-108: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 18:45:03,921 [Worker-108: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 18:45:03,921 [Worker-108: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 19:00:35,560 [Worker-119: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 19:00:35,560 [Worker-119: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 19:00:35,560 [Worker-119: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 19:00:35,560 [Worker-119: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 19:57:02,409 [Worker-133: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 19:57:02,409 [Worker-133: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 19:57:02,409 [Worker-133: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 19:57:02,409 [Worker-133: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 19:57:58,095 [Worker-135: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 19:57:58,095 [Worker-135: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 19:57:58,096 [Worker-135: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 19:57:58,096 [Worker-135: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 19:58:00,936 [Worker-135: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 19:58:00,937 [Worker-135: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 19:58:00,938 [Worker-135: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 19:58:00,938 [Worker-135: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 19:59:57,038 [Worker-135: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 19:59:57,038 [Worker-135: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 19:59:57,039 [Worker-135: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 19:59:57,039 [Worker-135: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 20:02:51,950 [Worker-135: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 20:02:51,950 [Worker-135: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 20:02:51,950 [Worker-135: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 20:02:51,950 [Worker-135: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 20:03:10,333 [Worker-134: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 20:03:10,333 [Worker-134: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 20:03:10,333 [Worker-134: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 20:03:10,333 [Worker-134: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 20:05:55,753 [Worker-142: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 20:05:55,753 [Worker-142: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources
+2021-04-17 20:05:55,754 [Worker-142: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 20:05:55,754 [Worker-142: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\test\resources
+2021-04-17 20:06:51,793 [Worker-142: Launching App] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-04-17 20:06:51,793 [Worker-142: Launching App] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\MiPro\eclipse-workspace_git\GitRepoAnalysis\src\main\resources

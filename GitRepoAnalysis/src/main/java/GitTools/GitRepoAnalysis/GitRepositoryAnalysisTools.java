@@ -23,6 +23,7 @@ import org.eclipse.jgit.diff.DiffEntry;
 import org.eclipse.jgit.diff.DiffFormatter;
 import org.eclipse.jgit.errors.AmbiguousObjectException;
 import org.eclipse.jgit.errors.IncorrectObjectTypeException;
+import org.eclipse.jgit.errors.MissingObjectException;
 import org.eclipse.jgit.errors.RevisionSyntaxException;
 import org.eclipse.jgit.lib.Constants;
 import org.eclipse.jgit.lib.ObjectId;
@@ -41,11 +42,12 @@ public class GitRepositoryAnalysisTools {
 
 	static final long month = 2592000000L;
 	static final int nearestLinesNumber = 10;
+	static final int persentToKnow = 50;
 	int monthNumber;
 	
 	public GitRepository gr = new GitRepository();	
 	public List<String> fileNames = new ArrayList<String>();
-	
+	public List<String> peopleNames = new ArrayList<String>();
 	
 	public GitRepositoryAnalysisTools(int months)
 	{
@@ -73,6 +75,207 @@ public class GitRepositoryAnalysisTools {
         }
 	}
 	
+	public void initListPeopleNames() throws RevisionSyntaxException, NoHeadException, MissingObjectException, IncorrectObjectTypeException, AmbiguousObjectException, GitAPIException, IOException
+	{
+		Git git = new Git(gr.jgitRepository);
+		Repository repo = gr.jgitRepository;
+		String treeName = "refs/heads/master";
+		String person;
+		for (RevCommit commit : git.log().add(repo.resolve(treeName)).call()) {
+		    person = commit.getCommitterIdent().getName();
+		    if (!peopleNames.contains(person) & !person.equals("GitHub"))
+		    {
+		    	peopleNames.add(person);
+		    }
+		}
+	}
+	
+	//main
+	public void calculatePeopleKnowingForAllLevels(File repo) throws Exception
+	{
+		//System.out.println("calculatePeopleKnowingForAllLevels");
+		gr.init(repo.getAbsolutePath());
+    	initListPeopleNames();
+    	System.out.println("People knowing repository: " + calculatePeopleKnowingRepository(repo));
+   
+    	calculatePeopleKnowingForFoldersAndFiles(repo);
+	}
+
+	public void calculatePeopleKnowingForFoldersAndFiles(File repo) throws Exception
+	{
+		//System.out.println("calculatePeopleKnowingForFoldersAndFiles");
+		for (final File fileEntry : repo.listFiles()) {
+	        if (fileEntry.isDirectory()) {
+	        	System.out.println("People knowing folder: " + fileEntry.getAbsolutePath() + ": "+ calculatePeopleKnowingFolder(fileEntry.getAbsolutePath().replace("\\", "/"), repo));
+	        	calculatePeopleKnowingForFoldersAndFiles(fileEntry);
+	        } else {
+	        	System.out.println("People knowing file: " + fileEntry.getAbsolutePath() + ": "+ calculatePeopleKnowingFile(fileEntry.getAbsolutePath().replace("\\", "/"), repo));
+	        }
+	    }
+	}
+	
+	public int calculatePeopleKnowingRepository(File repo) throws Exception
+	{
+		//System.out.println("calculatePeopleKnowingRepository");
+		int count = 0;
+    	//gr.init(repo.getAbsolutePath());
+    	//initListPeopleNames();
+    	
+    	for(String person : peopleNames) {
+    		if (calculateLinesPercentInFolderKnownBy(repo.getAbsolutePath().replace("\\", "/"), repo, person) >= persentToKnow)
+    		{
+    			count++;
+    		}
+    	}
+    	
+    	
+    	return count;
+	}
+	
+	public int calculatePeopleKnowingFolder(String folderName, File repo) throws Exception
+	{
+		//System.out.println("calculatePeopleKnowingFolder");
+		int count = 0;
+    	//gr.init(repo.getAbsolutePath());
+    	//initListPeopleNames();
+    	
+    	for(String person : peopleNames) {
+    		if (calculateLinesPercentInFolderKnownBy(folderName, repo, person) >= persentToKnow)
+    		{
+    			count++;
+    		}
+    	}
+    	
+    	
+    	return count;
+	}
+
+	public int calculatePeopleKnowingFile(String fileName, File repo) throws Exception
+	{
+		//System.out.println("calculatePeopleKnowingFile");
+		int count = 0;
+    	//gr.init(repo.getAbsolutePath());
+    	//initListPeopleNames();
+		File file = new File(fileName);
+    	
+    	for(String person : peopleNames) {
+    		int length = countLinesNew(file.getAbsolutePath().replace("\\", "/"));
+    		System.out.println("length = " + length);
+    		int calc = calculateLinesPercentInFileKnownBy(fileName, repo, length, person);
+    		System.out.println("fileName = " +  fileName + " person = "+ person + " calc = " + calc);
+    		if (calculateLinesPercentInFileKnownBy(fileName, repo, length, person) >= persentToKnow)
+    		{
+    			count++;
+    		}
+    	}
+    	
+    	
+    	return count;
+	}
+	
+	public int calculateLinesPercentInFolderKnownBy(String folderName, File repo, String person) throws Exception
+	{
+		//System.out.println("calculateLinesPercentInFolderKnownBy");
+		File folder = new File(folderName);
+		int count = 0, sum = 0, calc;
+		
+		for (final File fileEntry : folder.listFiles()) {
+	        if (fileEntry.isDirectory()) {
+	        	sum = sum + calculateLinesPercentInFolderKnownBy(fileEntry.getAbsolutePath().replace("\\", "/"), repo, person);
+	        	count++;
+	        } 
+	        else {
+	        	int length = countLinesNew(fileEntry.getAbsolutePath().replace("\\", "/"));
+	        	calc = calculateLinesPercentInFileKnownBy(fileEntry.getAbsolutePath().replace("\\", "/"), repo, length, person);
+	        	if (calc != -1)
+	        	{
+	        		sum = sum + calc;
+	        		count++;
+	        	}
+	        	
+	        }
+	    }
+		
+		//System.out.println("In " +folderName + " " + person + " knows " + ((count==0) ? 0 : sum / count) + "%");
+		return (count==0) ? 0 : sum / count;
+	}
+	
+	public int calculateLinesPercentInFileKnownBy(String fileName, File repo, int length, String person) throws Exception
+	{
+		//System.out.println("calculateLinesPercentInFileKnownBy file: " + fileName + ", person: " + person);
+    	BlameResult br = gr.getBlameResultForFile(fileName.replace(repo.getAbsolutePath().replace("\\", "/") + "/", ""));
+    	int countKnownLines = 0;
+     	int i = 0;
+     	Date d = new Date(System.currentTimeMillis() - month * monthNumber);
+     	RevCommit commit, parentCommit;
+     	boolean stop;
+     	
+     	try {
+     		while (length > i)
+        	{
+        		//System.out.println("while, i =" + i + ", length=" + length );
+     			commit = br.getSourceCommit(i);
+     			int lineNum = i;
+     			stop = false;
+     			//System.out.println("before while");
+             	while (!stop)
+             	{
+             		if (commit.getParentCount() > 0)
+             		{
+             			//System.out.println("commit.getParentCount() > 0");
+             			parentCommit = commit.getParent(0);
+             			if ( person.equals(commit.getCommitterIdent().getName()) & diffBetweenCommitsContainsThisLineOrNearestLines(commit, parentCommit,repo, fileName, lineNum))
+             			{
+             				//System.out.println("if1");
+             				if (d.before(commit.getCommitterIdent().getWhen()))
+             				{
+             					countKnownLines++;
+             					//System.out.println("1countKnownLines = "+countKnownLines);
+             				}
+             				stop = true;
+             			}
+             			
+             			commit = parentCommit;
+             			lineNum = lineNumberInPreviousVersion(commit, parentCommit, repo, fileName, lineNum);
+             			//System.out.println("lineNum = "+lineNum);
+             			if (lineNum == -1)//строка только появилась в этом коммите
+             			{
+             				//System.out.println("lineNum == -1");
+             				stop = true;	
+             			}
+             						
+             		}
+             		else
+             		{
+             			//System.out.println("no parent");
+             			if (person.equals(commit.getCommitterIdent().getName()) & diffForInitCommitContainsThisLineOrNearestLines(commit, repo, fileName, lineNum))
+             			{
+             				System.out.println("if2");
+             				if (d.before(commit.getCommitterIdent().getWhen()))
+             				{
+             					countKnownLines++;
+             					//System.out.println("2countKnownLines = "+countKnownLines);
+             				}
+             			}
+             			stop = true; // выходим, для этой строки дальше не смотрим
+             		}
+             	}
+				//System.out.println("after while");
+		
+        		i++;
+        	}
+     	}catch(Exception e)
+     	{
+     		//System.out.println("exception");
+     		if (i == 0)
+     			length = 0;
+     	}
+    	
+     	System.out.println("In " + fileName + " " + person + " knows " + ((length == 0) ? -1 : countKnownLines*100 / length) + "%");
+    	return (length == 0) ? -1 : countKnownLines*100 / length; // пустые и автосгенерированные файлы при подсчёте не учитываем
+	}
+	
+	
 	public int calculateKnownLinesPercentInFile(String fileName, File repo, int length, int peopleNumber) throws Exception
 	{
     	BlameResult br = gr.getBlameResultForFile(fileName.replace(repo.getAbsolutePath().replace("\\", "/") + "/", ""));
@@ -86,23 +289,15 @@ public class GitRepositoryAnalysisTools {
         	{
      			List<PersonIdent> people = new LinkedList<PersonIdent>();
      			commit = br.getSourceCommit(i);
-     			//people.add(commit.getCommitterIdent());
      			int lineNum = i;
-     			//if (d.before(br.getSourceCommitter(lineNum).getWhen())) //имеет смысл смотреть дальше
-     			//{
      				if (peopleNumber != 1)
      				{
              			while (peopleNumber > j)
              			{
-             				//System.out.println("while (peopleNumber > j)");
              				if (commit.getParentCount() > 0)
              				{
-             					//System.out.println("(commit.getParentCount() > 0)");
              					parentCommit = commit.getParent(0);
-             					//if (d.before(parentCommit.getAuthorIdent().getWhen()))//имеет смысл смотреть дальше
-             					//{
-             						//System.out.println("d.before(parentCommit.getAuthorIdent().getWhen())");
-             						if ( !people.contains(commit.getAuthorIdent()) & diffBetweenCommitsContainsThisLineOrNearestLines(commit, parentCommit,repo, fileName, lineNum))
+             						if ( !people.contains(commit.getAuthorIdent()) & diffBetweenCommitsContainsThisLineOrNearestLines(commit, parentCommit,repo, fileName, lineNum) & d.before(commit.getAuthorIdent().getWhen()))
              						{
              							people.add(commit.getAuthorIdent());
              							if (peopleNumber == j + 1) // мы на последней итерации
@@ -119,18 +314,12 @@ public class GitRepositoryAnalysisTools {
              							j = peopleNumber;	
              						}
              						
-             						//пересчитать номер строки 
-             					//}
-             					//else
-             					//{
-             						//j = peopleNumber; // выходим, для этой строки дальше не смотрим
-             					//}
              				}
              				else
              				{
              					if (j == peopleNumber - 1)
              					{
-             						if (!people.contains(commit.getAuthorIdent()) & diffForInitCommitContainsThisLineOrNearestLines(commit, repo, fileName, lineNum))
+             						if (!people.contains(commit.getAuthorIdent()) & diffForInitCommitContainsThisLineOrNearestLines(commit, repo, fileName, lineNum) & d.before(commit.getAuthorIdent().getWhen()))
              						{
              							countKnownLines++;
              						}
@@ -161,7 +350,7 @@ public class GitRepositoryAnalysisTools {
         	}
      	}catch(Exception e)
      	{
-     		//System.out.println("exception");
+     		System.out.println("exception");
      		if (i == 0)
      			length = 0;
      	}
@@ -169,7 +358,7 @@ public class GitRepositoryAnalysisTools {
     	return (length == 0) ? -1 : countKnownLines*100 / length; // пустые и автосгенерированные файлы при подсчёте не учитываем
 	}
 	
-	public int calculateTotalUnknownLinesPercent(File repo, int peopleNumber) throws Exception
+	public int calculateTotalKnownLinesPercent(File repo, int peopleNumber) throws Exception
 	{
 		int calc;
 		int calcTotal = 0;

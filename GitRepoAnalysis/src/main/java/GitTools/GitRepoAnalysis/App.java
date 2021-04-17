@@ -15,8 +15,8 @@ public class App
         String repoLink = in.next();
         System.out.print("Введите число месяцев для подсчёта давности: ");
         int monthNumber = in.nextInt();
-        System.out.print("Введите число людей для проверки: ");
-        int peopleNumber = in.nextInt();
+        //System.out.print("Введите число людей для проверки: ");
+        //int peopleNumber = in.nextInt();
         
         in.close();
     	File directory = new File(FOLDER_FOR_SAVING+repoLink.substring(repoLink.lastIndexOf("https://github.com")+18).replace(".git", ""));
@@ -39,7 +39,8 @@ public class App
     	
     	GitRepositoryAnalysisTools g = new GitRepositoryAnalysisTools(monthNumber);
     	File repository = new File(path);
-    	System.out.println("Total percent of known lines: " + g.calculateTotalUnknownLinesPercent(repository, peopleNumber));
+    	//System.out.println("Total percent of known lines: " + g.calculateTotalKnownLinesPercent(repository, peopleNumber));
+    	g.calculatePeopleKnowingForAllLevels(repository);
     	
     	//g.calculateLinesInFileKnownByMoreThen("C:/Users/MiPro/LetsDoStuff/LetsDoStuff.Domain/LdsContext.cs",20);
     	
