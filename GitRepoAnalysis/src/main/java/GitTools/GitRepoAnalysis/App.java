@@ -1,16 +1,23 @@
 package GitTools.GitRepoAnalysis;
 
 import java.io.File;
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Scanner;
 
 import org.eclipse.jgit.api.Git;
 
 public class App 
 {		
-	public static final String FOLDER_FOR_SAVING = "C:/Users/MiPro";
+	//public static final String FOLDER_FOR_SAVING = "C:/Users/MiPro";
+	
     public static void main( String[] args ) throws Exception
     {	
-        Scanner in = new Scanner(System.in);
+        /*Scanner in = new Scanner(System.in);
         System.out.print("Введите ссылку на гит-репозиторий: ");
         String repoLink = in.next();
         System.out.print("Введите число месяцев для подсчёта давности: ");
@@ -37,12 +44,15 @@ public class App
     		path = directory.getAbsolutePath();
     	}
     	
-    	GitRepositoryAnalysisTools g = new GitRepositoryAnalysisTools(monthNumber);
+    	Repo g = new Repo();
     	File repository = new File(path);
-    	//System.out.println("Total percent of known lines: " + g.calculateTotalKnownLinesPercent(repository, peopleNumber));
-    	g.calculatePeopleKnowingForAllLevels(repository);
     	
-    	//g.calculateLinesInFileKnownByMoreThen("C:/Users/MiPro/LetsDoStuff/LetsDoStuff.Domain/LdsContext.cs",20);
+    	g.calculateAll(repository, repoLink);
+    	
+    	*/
+    	
+    	Repo g = new Repo();
+    	g.calculateAll();
     	
     }
 }
