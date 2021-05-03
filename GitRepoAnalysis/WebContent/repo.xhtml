@@ -6,20 +6,63 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link type="text/css" rel="stylesheet"  href="css/styles.css"></link>
   </head>
   <body>
+  <script src="https://d3js.org/d3.v3.min.js"></script>
   <h:form>
 		<h3>Repository info</h3>
 		<h:panelGrid columns="2" border="0">
         	<h:outputText value="Repository"/>
         	<h:inputText value="#{Repo.link}" />
         </h:panelGrid>
-        <h:commandButton value="Calculate" action="#{Repo.calculateAll}"/>
+        <h:commandButton value="Calculate" action="#{Repo.calculateAll}"/>   
         
+        <h:outputScript name="js/d3.min.js"/>
+        <h:outputScript name="js/jquery.min.js"/>
+        <h:outputScript name="js/test.js"/>
 		 <h:outputScript>
-			
+var svg, group;
+var JSONItems = JSON.parse(data);
+console.log(JSONItems);
+
+(function(){
+  svg = d3.select('body').append('svg').attr('width', window.innerWidth).attr('height',window.innerHeight);
+  group = svg.append('g');
+  createTreemap(JSONItems);
+})();
+
+
+function createTreemap(JSONItems) {
+  
+  var root = d3.hierarchy(JSONItems);
+
+var treemapLayout = d3.treemap()
+  .size([400, 200])
+  .paddingOuter(10);;
+
+var root = d3.hierarchy(JSONItems);
+
+root.sum(function(d) {
+  return d.value;
+});
+
+treemapLayout(root);
+
+d3.select('svg g')
+  .selectAll('rect')
+  .data(root.descendants())
+  .enter()
+  .append('rect')
+  .attr('x', function(d) { return d.x0; })
+  .attr('y', function(d) { return d.y0; })
+  .attr('width', function(d) { return d.x1 - d.x0; })
+  .attr('height', function(d) { return d.y1 - d.y0; })
+  .attr('fill','red');
+  
+  
+}
 		</h:outputScript>
-        
     </h:form>
   
 
