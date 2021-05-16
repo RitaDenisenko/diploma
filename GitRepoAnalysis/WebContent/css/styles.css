@@ -4,3 +4,10 @@ rect {
   opacity: 0.3;
   stroke: white;
 }
+
+ body {
+    margin-top: 5cm;
+    margin-bottom: 5cm;
+    margin-left: 5cm;
+    margin-right: 5cm;
+ }

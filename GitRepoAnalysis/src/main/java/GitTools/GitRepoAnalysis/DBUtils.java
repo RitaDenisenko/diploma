@@ -14,6 +14,8 @@ public class DBUtils {
 	
 	public static final String URL = "jdbc:sqlite:C:/Users/MiPro/GitDB.db";
 	
+
+	
     public static Connection connect() throws SQLException {
         Connection conn = null;
         //try {
@@ -27,6 +29,90 @@ public class DBUtils {
         //}
         
         return conn;
+    }
+    
+    public static int selectFolderPeopleByPathAndRepo(String path, String repo)
+    {
+        String sql = "SELECT f.people_knowing FROM folders f join repositories r on f.id_repository = r.id WHERE r.link = ? and f.path = ?";
+        int people_knowing = -1;
+        try (Connection conn = connect();
+                PreparedStatement pstmt  = conn.prepareStatement(sql)){
+               
+               // set the value
+               pstmt.setString(1,repo);
+               pstmt.setString(2,path);
+               //
+               ResultSet rs  = pstmt.executeQuery();
+               
+               // loop through the result set
+               while (rs.next()) {
+            	   people_knowing = rs.getInt("people_knowing");
+               }
+           } catch (SQLException e) {
+               System.out.println(e.getMessage());
+           }
+        
+        return people_knowing;
+    }
+    
+    public static int selectFilePeopleByPathAndRepo(String path, String repo)
+    {
+        String sql = "SELECT f.people_knowing FROM files f join repositories r on f.id_repository = r.id WHERE r.link = ? and f.path = ?";
+        int people_knowing = -1;
+        try (Connection conn = connect();
+                PreparedStatement pstmt  = conn.prepareStatement(sql)){
+               
+               // set the value
+               pstmt.setString(1,repo);
+               pstmt.setString(2,path);
+               //
+               ResultSet rs  = pstmt.executeQuery();
+               
+               // loop through the result set
+               while (rs.next()) {
+            	   people_knowing = rs.getInt("people_knowing");
+               }
+           } catch (SQLException e) {
+               System.out.println(e.getMessage());
+           }
+        
+        return people_knowing;
+    }
+    
+    public static List<RepoMember> selectChildrenOfFolder(String folder, String repo)
+    {
+    	List<RepoMember> children = new ArrayList<RepoMember>();
+    	String path;
+    	int peopleKnowing;
+    	boolean isFolder;
+    	
+    	String sql = "SELECT f.path, f.people_knowing, 0 as is_folder FROM files f WHERE f.id_folder in (select id from folders fd where fd.path = ? and fd.id_repository = ?) "
+    			   + "UNION ALL SELECT f1.path, f1.people_knowing, 1 as is_file FROM folders f1 WHERE f1.id_parent_folder in (select id from folders f2 where f2.path = ? and f2.id_repository = ?)";
+        
+        try (Connection conn = connect();
+                PreparedStatement pstmt  = conn.prepareStatement(sql)){
+               
+               // set the value
+               pstmt.setString(1,folder);
+               pstmt.setInt(2,selectRepositoryIdByLink(repo));
+               pstmt.setString(3,folder);
+               pstmt.setInt(4,selectRepositoryIdByLink(repo));
+               //
+               ResultSet rs  = pstmt.executeQuery();
+               
+               // loop through the result set
+               while (rs.next()) {
+            	   //people_knowing = rs.getInt("people_knowing");
+            	   path = rs.getString("path");
+            	   peopleKnowing = rs.getInt("people_knowing");
+            	   isFolder = rs.getInt("is_folder")==1;
+            	   children.add(new RepoMember(path, peopleKnowing, isFolder));
+               }
+           } catch (SQLException e) {
+               System.out.println(e.getMessage());
+           }
+    	
+    	return children;
     }
     
     //надо чтобы в списке папки лежали от корневой к более низким уровням

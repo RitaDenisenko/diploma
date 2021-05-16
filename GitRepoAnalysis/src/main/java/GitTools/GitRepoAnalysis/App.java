@@ -1,6 +1,9 @@
 package GitTools.GitRepoAnalysis;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,6 +17,14 @@ import org.eclipse.jgit.api.Git;
 public class App 
 {		
 	//public static final String FOLDER_FOR_SAVING = "C:/Users/MiPro";
+	
+	public static void clearJSFile() throws IOException {
+        FileWriter fwOb = new FileWriter("C:\\Users\\MiPro\\eclipse-workspace_git\\GitRepoAnalysis\\WebContent\\resources\\js\\test.js", false); 
+        PrintWriter pwOb = new PrintWriter(fwOb, false);
+        pwOb.flush();
+        pwOb.close();
+        fwOb.close();
+    }
 	
     public static void main( String[] args ) throws Exception
     {	
@@ -51,8 +62,15 @@ public class App
     	
     	*/
     	
-    	Repo g = new Repo();
-    	g.calculateAll();
+    	//Repo g = new Repo();
+    	//g.calculateAll();
     	
+    	//clearJSFile();
+    	
+    	/*Repo g = new Repo();
+    	g.link = "https://github.com/sidgrouse/LetsDoStuff.git";
+    	g.calculateAll();
+    	System.out.println(g.getDataForTreemap());
+    	*/
     }
 }

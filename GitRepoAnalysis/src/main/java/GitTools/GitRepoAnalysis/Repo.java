@@ -4,7 +4,9 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileDescriptor;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -55,37 +57,24 @@ public class Repo {
 	static final int percentToKnow = 50;
 	static final int monthNumber = 10;
 	static final String FOLDER_FOR_SAVING = "C:/Users/MiPro";
-	
+	//static final String JS_FILE = "C:\\Users\\MiPro\\eclipse-workspace_git\\GitRepoAnalysis\\WebContent\\resources\\js\\test.js";
 	public GitRepository gr = new GitRepository();	
 	public String link;
 	public List<String> fileNames = new ArrayList<String>();
 	public List<String> peopleNames = new ArrayList<String>();
 	public List<String> folderNames = new ArrayList<String>();
 	public File repository;
+	public String resultData = "";
 	
-	/*public Repo(String link) throws InvalidRemoteException, TransportException, GitAPIException
+	public String getResultData()
 	{
-		this.link = link;
-		File directory = new File(FOLDER_FOR_SAVING+link.substring(link.lastIndexOf("https://github.com")+18).replace(".git", ""));
-    	String path;
-    	
-    	if (!directory.exists())
-    	{
-        	Git git = Git.cloneRepository()
-      			  .setURI( link ) //https://github.com/sidgrouse/LetsDoStuff.git   https://github.com/catchorg/Catch2.git
-      			  .setDirectory(directory)
-      			  .call();
-      	
-        	System.out.println(git.getRepository().getDirectory().getAbsolutePath().replace("\\", "/").replace("/.git", ""));
-        	path = git.getRepository().getDirectory().getAbsolutePath().replace("\\", "/").replace("/.git", "");    		
-    	}
-    	else
-    	{
-    		path = directory.getAbsolutePath();
-    	}
-    	
-    	repository = new File(path);
-	}*/
+		return (resultData == null) ? "" : resultData;
+	}
+	
+	public void setResultData(String newResultData)
+	{
+		 resultData = newResultData;
+	}
 	
 	public Repo()
 	{
@@ -108,7 +97,7 @@ public class Repo {
 	    for (final File fileEntry : folder.listFiles()) {
 	        if (fileEntry.isDirectory()) {
 	        	initListFileNames(fileEntry);
-	        } else {
+	        } else if (!fileEntry.getAbsolutePath().replace("\\", "/").endsWith("/.gitignore")){
 	        	//System.out.println(fileEntry.getAbsolutePath().replace("\\", "/"));
 	            fileNames.add(fileEntry.getAbsolutePath().replace("\\", "/"));
 	        }
@@ -117,7 +106,7 @@ public class Repo {
 	
 	public void initListFolderNames(final File folder) {	
 	    for (final File fileEntry : folder.listFiles()) {
-	        if (fileEntry.isDirectory()) {
+	        if (fileEntry.isDirectory() && !fileEntry.getAbsolutePath().replace("\\", "/").endsWith("/.git")) {
 	        	folderNames.add(fileEntry.getAbsolutePath().replace("\\", "/"));
 	        	initListFolderNames(fileEntry);
 	        } 
@@ -149,6 +138,14 @@ public class Repo {
 		    }
 		}
 	}
+	
+	public static void clearFile(String fileName) throws IOException {
+        FileWriter fwOb = new FileWriter(fileName, false); 
+        PrintWriter pwOb = new PrintWriter(fwOb, false);
+        pwOb.flush();
+        pwOb.close();
+        fwOb.close();
+    }
 	
 	//main
 	public void calculateAll() throws Exception
@@ -182,6 +179,7 @@ public class Repo {
 		
 		gr.init(repository.getAbsolutePath());
     	initListPeopleNames();
+    	folderNames.add(repository.getAbsolutePath().replace("\\", "/"));
     	initListFolderNames(repository);
     	initListFileNames(repository);		
     	
@@ -221,10 +219,50 @@ public class Repo {
     		
     	}
     	
-    	
-    	//System.out.println("People knowing repository: " + calculatePeopleKnowingRepository(repo));
-   
-    	//calculatePeopleKnowingForFoldersAndFiles(repo);
+    	resultData = getDataForTreemap();
+	}
+	
+	public String getDataForTreemap()
+	{
+		String name = "* " + repository.getAbsolutePath().replace("\\", "/")
+			      .substring(repository.getAbsolutePath().replace("\\", "/")
+			    		     .lastIndexOf("/")+1);
+		String data = "{\"name\":\""
+				    + name
+				    + ", known by " + Integer.toString(DBUtils.selectFolderPeopleByPathAndRepo(repository.getAbsolutePath().replace("\\", "/"), link)) + "\""
+				    + ", \"children\":[" + getChildrenData(repository.getAbsolutePath().replace("\\", "/") )+ "]}" ;
+		
+		return data;
+	}
+	
+	public String getChildrenData(String folder)
+	{
+		StringBuilder sb = new StringBuilder();
+		List<RepoMember> children = DBUtils.selectChildrenOfFolder(folder, link);
+		
+		for (RepoMember rm : children)
+		{
+			String name = "* " + rm.path.substring(rm.path.lastIndexOf("/") + 1) + ", known by " + Integer.toString(rm.peopleKnows);
+			sb.append(",{\"name\":\"" + name  + "\",");
+			if(rm.isFolder)
+			{
+				sb.append(" \"children\":[");
+				sb.append(getChildrenData(rm.path));
+				sb.append("],");
+			}
+			//else
+			//{
+				sb.append(" \"value\":" + Integer.toString(rm.peopleKnows*100 + 50));
+			//}
+				sb.append("}");
+		}
+		
+		if(sb.indexOf(",")==0)
+		{
+			sb.deleteCharAt(0);
+		}
+		
+		return sb.toString();
 	}
 	
 	/*
@@ -530,6 +568,7 @@ public class Repo {
 		
 		File tempFile = new File("temp.txt");
 		tempFile.createNewFile(); // if file already exists will do nothing 
+		clearFile("temp.txt");
 		FileOutputStream oFile = new FileOutputStream(tempFile, true); 
 	    DiffFormatter df = new DiffFormatter(oFile);
 		df.setRepository( git.getRepository() );

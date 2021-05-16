@@ -16,15 +16,19 @@
         	<h:outputText value="Repository"/>
         	<h:inputText value="#{Repo.link}" />
         </h:panelGrid>
-        <h:commandButton value="Calculate" action="#{Repo.calculateAll}"/>   
-        
+        <h:commandButton value="Calculate" action="#{Repo.calculateAll}"/>  
+        <br/>
+        <br/>
+        <br/>
+
+        <h:inputHidden value="#{Repo.resultData}" id="hiddenId" />
         <h:outputScript name="js/d3.min.js"/>
         <h:outputScript name="js/jquery.min.js"/>
-        <h:outputScript name="js/test.js"/>
 		 <h:outputScript>
 var svg, group;
-var JSONItems = JSON.parse(data);
-console.log(JSONItems);
+
+
+var JSONItems = JSON.parse(document.getElementById("j_idt4:hiddenId").value);
 
 (function(){
   svg = d3.select('body').append('svg').attr('width', window.innerWidth).attr('height',window.innerHeight);
@@ -38,8 +42,8 @@ function createTreemap(JSONItems) {
   var root = d3.hierarchy(JSONItems);
 
 var treemapLayout = d3.treemap()
-  .size([400, 200])
-  .paddingOuter(10);;
+  .size([1000, 800])
+  .paddingOuter(25);;
 
 var root = d3.hierarchy(JSONItems);
 
@@ -58,8 +62,20 @@ d3.select('svg g')
   .attr('y', function(d) { return d.y0; })
   .attr('width', function(d) { return d.x1 - d.x0; })
   .attr('height', function(d) { return d.y1 - d.y0; })
-  .attr('fill','red');
+  .style("stroke", "black")
+  .style("fill", function(d){ if(d.data.name.slice(-1) == 0) return "#FF0033"; if (d.data.name.slice(-1) == 1) return "#FFFF55"; return "#99FF33";} );
   
+
+        
+svg
+    .selectAll("vals")
+    .data(root.leaves())
+    .enter()
+    .append("title")
+    .text(function(d) { return d.data.name; });      
+ 
+
+ 
   
 }
 		</h:outputScript>
