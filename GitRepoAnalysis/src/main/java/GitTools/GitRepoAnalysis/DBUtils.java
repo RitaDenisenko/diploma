@@ -9,6 +9,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import GitTools.GitRepoAnalysis.RepoMember;
 
 public class DBUtils {
 	
@@ -29,6 +30,54 @@ public class DBUtils {
         //}
         
         return conn;
+    }
+    
+    public static List<PersonKnowsIn> selectPeopleWithUniqueKnowlege()
+    {
+    	List<PersonKnowsIn> pki = new ArrayList<PersonKnowsIn>();
+    	
+    	String sql = "select * from (SELECT pkf.percent, p.name, f.path FROM PersonKnowsInFile pkf join people p on pkf.id_person = p.id join files f on pkf.id_file = f.id WHERE pkf.percent >= 50 and f.people_knowing = 1 "
+    			   + "UNION ALL SELECT pkf.percent, p.name, f.path FROM PersonKnowsInFolder pkf join people p on pkf.id_person = p.id join folders f on pkf.id_folder = f.id WHERE pkf.percent >= 50 and f.people_knowing = 1) order by name";
+    	
+    	try (Connection conn = connect();
+                Statement stmt  = conn.createStatement();
+                ResultSet rs    = stmt.executeQuery(sql)){
+               
+               while (rs.next()) {
+               	pki.add(new PersonKnowsIn(rs.getString("name"), rs.getString("path"), rs.getInt("percent")));
+               }
+           } catch (SQLException e) {
+               System.out.println(e.getMessage());
+           }
+    	
+    	return pki;
+    }
+    
+    public static List<PersonKnowsIn> selectUniqueKnowlegeForPerson(String person)
+    {
+    	List<PersonKnowsIn> pki = new ArrayList<PersonKnowsIn>();
+    	
+    	String sql = "SELECT pkf.percent, p.name, f.path FROM PersonKnowsInFile pkf join people p on pkf.id_person = p.id join files f on pkf.id_file = f.id WHERE pkf.percent >= 50 and f.people_knowing = 1 and p.name = ?"
+    			   + "UNION ALL SELECT pkf.percent, p.name, f.path FROM PersonKnowsInFolder pkf join people p on pkf.id_person = p.id join folders f on pkf.id_folder = f.id WHERE pkf.percent >= 50 and f.people_knowing = 1 and p.name = ?";
+    	
+    	try (Connection conn = connect();
+                PreparedStatement pstmt  = conn.prepareStatement(sql)){
+               
+               // set the value
+               pstmt.setString(1,person);
+               pstmt.setString(2,person);
+               //
+               ResultSet rs  = pstmt.executeQuery();
+               
+               // loop through the result set
+               while (rs.next()) {
+            	   pki.add(new PersonKnowsIn(rs.getString("name"), rs.getString("path"), rs.getInt("percent")));
+               }
+           } catch (SQLException e) {
+               System.out.println(e.getMessage());
+           }
+    	
+    	return pki;
     }
     
     public static int selectFolderPeopleByPathAndRepo(String path, String repo)
@@ -535,12 +584,22 @@ public class DBUtils {
     
     public static void insertPersonKnowsInFile(String person, String file, String repo, int percent)
     {
-    	String sql = "INSERT INTO PersonKnowsInFile(id_person, id_file, percent) VALUES(?, ?, ?)";
-        try (Connection conn = connect();
+    	String sql;
+    	if (!personKnowsInFileExists(person, file, repo))
+    	{
+    		sql = "INSERT INTO PersonKnowsInFile(percent, id_person, id_file) VALUES(?, ?, ?)";
+    		
+    	}else
+    	{
+    		sql = "UPDATE PersonKnowsInFile SET percent = ? WHERE id_person = ? AND id_file = ?";
+    	}
+    	
+    	try (Connection conn = connect();
                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
-        		   pstmt.setInt(1, selectPersonIdByName(person));
-        		   pstmt.setInt(2, selectFileIdByPathAndRepo(file, repo));
-                   pstmt.setInt(3, percent);
+    			   pstmt.setInt(1, percent);
+    			   pstmt.setInt(2, selectPersonIdByName(person));
+        		   pstmt.setInt(3, selectFileIdByPathAndRepo(file, repo));
+                   
                    pstmt.executeUpdate();
            } catch (SQLException e) {
                 System.out.println(e.getMessage());
@@ -569,12 +628,22 @@ public class DBUtils {
     
     public static void insertPersonKnowsInFolder(String person, String folder, String repo, int percent)
     {	
-    	String sql = "INSERT INTO PersonKnowsInFolder(id_person, id_folder, percent) VALUES(?, ?, ?)";
-        try (Connection conn = connect();
+    	String sql;
+    	if (!personKnowsInFolderExists(person, folder, repo))
+    	{
+    		sql = "INSERT INTO PersonKnowsInFolder(percent, id_person, id_folder) VALUES(?, ?, ?)";
+    		
+    	}else
+    	{
+    		sql = "UPDATE PersonKnowsInFolder SET percent = ? WHERE id_person = ? AND id_folder = ?";
+    	}
+    	
+    	try (Connection conn = connect();
                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
-        		   pstmt.setInt(1, selectPersonIdByName(person));
-        		   pstmt.setInt(2, selectFolderIdByPathAndRepo(folder, repo));
-                   pstmt.setInt(3, percent);
+    			   pstmt.setInt(1, percent);
+    			   pstmt.setInt(2, selectPersonIdByName(person));
+        		   pstmt.setInt(3, selectFileIdByPathAndRepo(folder, repo));
+                   
                    pstmt.executeUpdate();
            } catch (SQLException e) {
                 System.out.println(e.getMessage());
@@ -609,6 +678,48 @@ public class DBUtils {
            pstmt.setString(1,path);
            pstmt.setString(2,repo);
            ResultSet rs  = pstmt.executeQuery();
+            
+            while (rs.next()) {
+            	cnt = rs.getInt("cnt");
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return cnt > 0;
+    }
+    
+    public static boolean personKnowsInFolderExists(String person, String path, String repo)
+    {
+    	String sql = "SELECT count(*) cnt FROM folders f join repositories r on r.id = f.id_repository join participation pt on r.id = pt.id_repository join people p on p.id = pt.id_person join personknowsinfolder pkif on (pkif.id_person = p.id and pkif.id_folder = f.id) where f.path = ? and r.link = ? and p.name = ?";
+        int cnt = -1;
+        try (Connection conn = connect();
+    			PreparedStatement pstmt  = conn.prepareStatement(sql)){
+           pstmt.setString(1,path);
+           pstmt.setString(2,repo);
+           pstmt.setString(3,person);
+           ResultSet rs  = pstmt.executeQuery();
+    		
+            
+            while (rs.next()) {
+            	cnt = rs.getInt("cnt");
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return cnt > 0;
+    }
+    
+    public static boolean personKnowsInFileExists(String person, String path, String repo)
+    {
+    	String sql = "SELECT count(*) cnt FROM files f join repositories r on r.id = f.id_repository join participation pt on r.id = pt.id_repository join people p on p.id = pt.id_person join personknowsinfile pkif on (pkif.id_person = p.id and pkif.id_file = f.id) where f.path = ? and r.link = ? and p.name = ?";
+        int cnt = -1;
+        try (Connection conn = connect();
+    			PreparedStatement pstmt  = conn.prepareStatement(sql)){
+           pstmt.setString(1,path);
+           pstmt.setString(2,repo);
+           pstmt.setString(3,person);
+           ResultSet rs  = pstmt.executeQuery();
+    		
             
             while (rs.next()) {
             	cnt = rs.getInt("cnt");

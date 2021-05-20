@@ -44,6 +44,7 @@ import org.eclipse.jgit.treewalk.AbstractTreeIterator;
 import org.eclipse.jgit.treewalk.CanonicalTreeParser;
 import org.eclipse.jgit.treewalk.EmptyTreeIterator;
 import org.eclipse.jgit.util.io.NullOutputStream;
+import GitTools.GitRepoAnalysis.RepoMember;
 
 import lombok.Data;
 
@@ -63,6 +64,8 @@ public class Repo {
 	public List<String> fileNames = new ArrayList<String>();
 	public List<String> peopleNames = new ArrayList<String>();
 	public List<String> folderNames = new ArrayList<String>();
+	public List<PersonKnowsIn> peopleKnowing;
+	public List<String> dataForEachPerson;
 	public File repository;
 	public String resultData = "";
 	
@@ -220,6 +223,34 @@ public class Repo {
     	}
     	
     	resultData = getDataForTreemap();
+    	peopleKnowing = DBUtils.selectPeopleWithUniqueKnowlege();
+    	
+    	List<PersonKnowsIn> pki;
+    	dataForEachPerson = new ArrayList<String>();
+    	for(String person : peopleNames)
+    	{
+    		pki = DBUtils.selectUniqueKnowlegeForPerson(person);
+    		if(!pki.isEmpty())
+    		{
+    			dataForEachPerson.add(personKnowlegeListToString(pki));
+    		}
+    	}
+	}
+	
+	public String personKnowlegeListToString(List<PersonKnowsIn> pki)
+	{
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("[");
+		
+		for(PersonKnowsIn p : pki)
+		{
+			sb.append("{\"title\": \"" + p.getPerson() + " knows " + p.getPercent() + "% of " + p.getPath().replace(FOLDER_FOR_SAVING + "/", "") + "\", \"value\": " + p.getPercent() + "},");
+		}
+		sb.deleteCharAt(sb.length() - 1);
+		sb.append("]");
+		
+		return sb.toString();
 	}
 	
 	public String getDataForTreemap()

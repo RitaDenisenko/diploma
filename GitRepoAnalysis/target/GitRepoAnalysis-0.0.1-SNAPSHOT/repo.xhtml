@@ -13,10 +13,10 @@
   <h:form>
 		<h3>Repository info</h3>
 		<h:panelGrid columns="2" border="0">
-        	<h:outputText value="Repository"/>
+        	<h:outputText value="Репозиторий"/>
         	<h:inputText value="#{Repo.link}" />
         </h:panelGrid>
-        <h:commandButton value="Calculate" action="#{Repo.calculateAll}"/>  
+        <h:commandButton value="Построить график" action="#{Repo.calculateAll}"/>  
         <br/>
         <br/>
         <br/>
@@ -79,6 +79,67 @@ svg
   
 }
 		</h:outputScript>
+		
+		<ui:repeat value="#{Repo.dataForEachPerson}" var="personData" varStatus="myVarStatus">
+    	
+    	<h:inputHidden value="#{personData}" id="hiddenId1" />
+    	<h:outputScript>
+        	
+        	 var margin = {
+            top: 60,
+            right: 25,
+            bottom: 15,
+            left: 60
+        };
+        	
+        	var dataArray = JSON.parse(document.getElementById("j_idt4:j_idt15:#{myVarStatus.index}:hiddenId1").value);
+        	
+ 			var svg = d3.select("body").append("svg")
+          .attr("height","80%")
+          .attr("width","80%");
+
+svg.selectAll("rect")
+    .data(dataArray)
+    .enter().append("rect")
+          .attr("class", "bar")
+          .attr("height", function(d, i) {return (d.value * 5 + 500)})
+          .attr("width","40")
+          .attr("x", function(d, i) {return (i * 60) + 25})
+          .attr("y", function(d, i) {return 200 - d.value });
+
+svg.selectAll("vals")
+    .data(dataArray)
+    .enter().append("title")
+    .text(function(d) {return d.title;});  
+
+    
+
+        	
+        </h:outputScript>
+</ui:repeat>
+		
+
+		
+		
+		<h:dataTable id="membersTable" value="#{Repo.peopleKnowing}"
+			var="personKnowsIn" styleClass="membersTable" headerClass="membersTableHeader"
+			rowClasses="membersTableOddRow, membersTableEvenRow">
+
+			<h:column>
+				<f:facet name="header">Участник проекта</f:facet>
+				<h:outputText value="#{personKnowsIn.person}" size="80"/>
+			</h:column>
+			<h:column>
+				<f:facet name="header">Файл или папка</f:facet>
+				<h:outputText value="#{personKnowsIn.path}" size="80"/>
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">Процент</f:facet>
+				<h:outputText value="#{personKnowsIn.percent}" size="20"/>
+			</h:column>
+
+		</h:dataTable>
     </h:form>
   
 
