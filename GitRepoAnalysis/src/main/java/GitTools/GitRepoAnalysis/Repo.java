@@ -255,7 +255,7 @@ public class Repo {
 	
 	public String getDataForTreemap()
 	{
-		String name = "* " + repository.getAbsolutePath().replace("\\", "/")
+		String name = repository.getAbsolutePath().replace("\\", "/")
 			      .substring(repository.getAbsolutePath().replace("\\", "/")
 			    		     .lastIndexOf("/")+1);
 		String data = "{\"name\":\""
@@ -273,7 +273,7 @@ public class Repo {
 		
 		for (RepoMember rm : children)
 		{
-			String name = "* " + rm.path.substring(rm.path.lastIndexOf("/") + 1) + ", known by " + Integer.toString(rm.peopleKnows);
+			String name = rm.path.substring(rm.path.lastIndexOf("/") + 1) + ", known by " + Integer.toString(rm.peopleKnows);
 			sb.append(",{\"name\":\"" + name  + "\",");
 			if(rm.isFolder)
 			{

@@ -11,12 +11,17 @@
   <body>
   <script src="https://d3js.org/d3.v3.min.js"></script>
   <h:form>
-		<h3>Repository info</h3>
+		<h3 style="font-weight: bold; font-size: 30px; font-family: Verdana, Arial, Helvetica, sans-serif; color: #2F4F4F; text-align: center;">Анализ &laquo;фактора автобуса&raquo;<br/>на основе гит репозитория</h3>
+		<br/>
+		<br/>
 		<h:panelGrid columns="2" border="0">
-        	<h:outputText value="Репозиторий"/>
-        	<h:inputText value="#{Repo.link}" />
+        	<h:outputText  style="font-family: Verdana, Arial, Helvetica, sans-serif;  font-weight: bold; font-size: 18px; color: #2F4F4F;" value="Введите ссылку на гит репозиторий"/> <br/>
+        	<h:outputText style="font-family: Verdana, Arial, Helvetica, sans-serif; color: #2F4F4F; font-size: 12px;" value="(например, https://github.com/sidgrouse/LetsDoStuff.git)"/> <br/> <br/>
+        	<h:inputText value="#{Repo.link}" size="50"/>
         </h:panelGrid>
-        <h:commandButton value="Построить график" action="#{Repo.calculateAll}"/>  
+        <br/>
+        <br/>
+        <h:commandButton value="Построить графики" action="#{Repo.calculateAll}"/>  
         <br/>
         <br/>
         <br/>
@@ -63,17 +68,12 @@ d3.select('svg g')
   .attr('width', function(d) { return d.x1 - d.x0; })
   .attr('height', function(d) { return d.y1 - d.y0; })
   .style("stroke", "black")
-  .style("fill", function(d){ if(d.data.name.slice(-1) == 0) return "#FF0033"; if (d.data.name.slice(-1) == 1) return "#FFFF55"; return "#99FF33";} );
+  .style("fill", function(d){ if(d.data.name.slice(-1) == 0) return "#FF0033"; if (d.data.name.slice(-1) == 1) return "#FFFF55"; return "#99FF33";} )
+  .append('title')
+  .text(function(d) {return d.data.name; });
   
 
         
-svg
-    .selectAll("vals")
-    .data(root.leaves())
-    .enter()
-    .append("title")
-    .text(function(d) { return d.data.name; });      
- 
 
  
   
@@ -84,34 +84,35 @@ svg
     	
     	<h:inputHidden value="#{personData}" id="hiddenId1" />
     	<h:outputScript>
-        	
-        	 var margin = {
-            top: 60,
-            right: 25,
-            bottom: 15,
-            left: 60
-        };
-        	
-        	var dataArray = JSON.parse(document.getElementById("j_idt4:j_idt15:#{myVarStatus.index}:hiddenId1").value);
-        	
- 			var svg = d3.select("body").append("svg")
-          .attr("height","80%")
-          .attr("width","80%");
 
-svg.selectAll("rect")
+var svg = d3.select("body").append("svg")
+          .attr("height","100%")
+          .attr("width","100%");
+        	
+        	var dataArray = JSON.parse(document.getElementById("j_idt4:j_idt19:#{myVarStatus.index}:hiddenId1").value);
+        	
+
+
+    svg.selectAll("rect")
     .data(dataArray)
     .enter().append("rect")
           .attr("class", "bar")
-          .attr("height", function(d, i) {return (d.value * 5 + 500)})
+          .attr("height", function(d, i) {return (d.value)})
           .attr("width","40")
           .attr("x", function(d, i) {return (i * 60) + 25})
-          .attr("y", function(d, i) {return 200 - d.value });
+          .attr("y", function(d, i) {return 200 - d.value })
+          .style("stroke", "black")
+        .style("fill", function(d){ if(d.value &lt; 75) return "#FF0033"; if (d.value &lt; 90) return "#FFFF55"; return "#99FF33";} )
+        .append('title')
+  		.text(function(d) {return d.title; });
+   
 
-svg.selectAll("vals")
+svg.selectAll("text")
     .data(dataArray)
-    .enter().append("title")
-    .text(function(d) {return d.title;});  
-
+    .enter().append("text")
+    .text(function(d) {return d.value})
+          .attr("x", function(d, i) {return (i * 60) + 30})
+          .attr("y", function(d, i) {return 190 - d.value});
     
 
         	
@@ -120,26 +121,7 @@ svg.selectAll("vals")
 		
 
 		
-		
-		<h:dataTable id="membersTable" value="#{Repo.peopleKnowing}"
-			var="personKnowsIn" styleClass="membersTable" headerClass="membersTableHeader"
-			rowClasses="membersTableOddRow, membersTableEvenRow">
 
-			<h:column>
-				<f:facet name="header">Участник проекта</f:facet>
-				<h:outputText value="#{personKnowsIn.person}" size="80"/>
-			</h:column>
-			<h:column>
-				<f:facet name="header">Файл или папка</f:facet>
-				<h:outputText value="#{personKnowsIn.path}" size="80"/>
-			</h:column>
-
-			<h:column>
-				<f:facet name="header">Процент</f:facet>
-				<h:outputText value="#{personKnowsIn.percent}" size="20"/>
-			</h:column>
-
-		</h:dataTable>
     </h:form>
   
 

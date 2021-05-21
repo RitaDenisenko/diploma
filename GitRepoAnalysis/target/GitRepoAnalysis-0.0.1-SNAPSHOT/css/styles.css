@@ -6,8 +6,9 @@ rect {
 }
 
  body {
-    margin-top: 5cm;
+    margin-top: 2cm;
     margin-bottom: 5cm;
     margin-left: 5cm;
     margin-right: 5cm;
+    color: #F0FFFF;
  }
