@@ -8,28 +8,38 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link type="text/css" rel="stylesheet"  href="css/styles.css"></link>
   </head>
-  <body>
+  <body style="color: #F0F8FF">
   <script src="https://d3js.org/d3.v3.min.js"></script>
   <h:form>
+  		<h:graphicImage  style="width: 250; height: auto; display: block; margin: 0 auto;" title="Фактор автобуса (bus factor) – мера сосредоточения информации среди отдельных членов проекта"
+   value = "https://lh3.googleusercontent.com/proxy/9DQWkVaR-iap6pob-TqXpN3mbUGFQ0_uUDZ8jamwx7uLS7SkdvMZJzLaxlDFF1kMjtP-SXlYeQIkbbqoXy_tWDhBzaYcHXfCDl3H4RL8kOxUz5oOEaNF51MNlqeoJw"/> 
 		<h3 style="font-weight: bold; font-size: 30px; font-family: Verdana, Arial, Helvetica, sans-serif; color: #2F4F4F; text-align: center;">Анализ &laquo;фактора автобуса&raquo;<br/>на основе гит репозитория</h3>
-		<br/>
 		<br/>
 		<h:panelGrid columns="2" border="0">
         	<h:outputText  style="font-family: Verdana, Arial, Helvetica, sans-serif;  font-weight: bold; font-size: 18px; color: #2F4F4F;" value="Введите ссылку на гит репозиторий"/> <br/>
         	<h:outputText style="font-family: Verdana, Arial, Helvetica, sans-serif; color: #2F4F4F; font-size: 12px;" value="(например, https://github.com/sidgrouse/LetsDoStuff.git)"/> <br/> <br/>
-        	<h:inputText value="#{Repo.link}" size="50"/>
+        	<h:inputText id = "repo" value="#{Repo.link}" size="50" validator="repoValidator"/>
+        	<h:message for="repo" style="font-family: Verdana, Arial, Helvetica, sans-serif; color: #2F4F4F; font-size: 11px;"/>
         </h:panelGrid>
         <br/>
-        <br/>
-        <h:commandButton value="Построить графики" action="#{Repo.calculateAll}"/>  
-        <br/>
-        <br/>
-        <br/>
-
-        <h:inputHidden value="#{Repo.resultData}" id="hiddenId" />
+         <h:inputHidden value="#{Repo.resultData}" id="hiddenId" />
         <h:outputScript name="js/d3.min.js"/>
         <h:outputScript name="js/jquery.min.js"/>
+        <h:commandButton value="Построить графики" action="#{Repo.calculateAll}"/>  
+        <br/>
+		<br/>
+		<br/>
+           <h:outputText id="txt" style="visibility: hidden; font-family: Verdana, Arial, Helvetica, sans-serif; color: #2F4F4F; font-size: 16px;" value="Вложенные друг в друга прямоугольники обозначают файлы и папки проекта"/>	
+           <ul id="list" type="square" style="visibility: hidden; font-size: 16px;">
+     			<li style="color: #FF0033; font-size: 16px;"><span style="color: black; font-family: Verdana, Arial, Helvetica, sans-serif; color: #2F4F4F; font-size: 14px;"> – 0 людей знают</span></li>
+     			<li style="color: #FFFF55; font-size: 16px;"><span style="color: black; font-family: Verdana, Arial, Helvetica, sans-serif; color: #2F4F4F; font-size: 14px;"> – 1 человек знает</span></li>
+     			<li style="color: #99FF33; font-size: 16px;"><span style="color: black; font-family: Verdana, Arial, Helvetica, sans-serif; color: #2F4F4F; font-size: 14px;"> – 2 или более людей знают</span></li>
+   		  </ul>
+   		  <h:outputText id="txt1" style="visibility: hidden; font-family: Verdana, Arial, Helvetica, sans-serif; color: #2F4F4F; font-size: 14px;" value="Наведите курсор на элемент графика, чтобы узнать больше"/>	
+
+       
 		 <h:outputScript>
+		
 var svg, group;
 
 
@@ -47,8 +57,8 @@ function createTreemap(JSONItems) {
   var root = d3.hierarchy(JSONItems);
 
 var treemapLayout = d3.treemap()
-  .size([1000, 800])
-  .paddingOuter(25);;
+  .size([1200, 600])
+  .paddingOuter(5);;
 
 var root = d3.hierarchy(JSONItems);
 
@@ -71,28 +81,30 @@ d3.select('svg g')
   .style("fill", function(d){ if(d.data.name.slice(-1) == 0) return "#FF0033"; if (d.data.name.slice(-1) == 1) return "#FFFF55"; return "#99FF33";} )
   .append('title')
   .text(function(d) {return d.data.name; });
-  
 
-        
-
- 
   
 }
+
+document.getElementById('list').style["visibility"] = "visible";
+document.getElementById('j_idt4:txt').style["visibility"] = "visible";
+document.getElementById('j_idt4:txt1').style["visibility"] = "visible";
 		</h:outputScript>
 		
 		<ui:repeat value="#{Repo.dataForEachPerson}" var="personData" varStatus="myVarStatus">
     	
-    	<h:inputHidden value="#{personData}" id="hiddenId1" />
+    	<h:inputHidden value="#{personData}" id="hiddenId1"/>
+    	<br/>
+    	<h:outputText id="txt2" style=" text-align: center; position: relative; top: 800px; visibility: hidden; font-family: Verdana, Arial, Helvetica, sans-serif; color: #2F4F4F; font-size: 16px;" value="Следующие участники обладают уникальными знаниями (наведите курсор на столбец, чтобы узнать больше)"/>
+    	<br/>
+    	
     	<h:outputScript>
 
 var svg = d3.select("body").append("svg")
-          .attr("height","100%")
+          .attr("height","200")
           .attr("width","100%");
         	
-        	var dataArray = JSON.parse(document.getElementById("j_idt4:j_idt19:#{myVarStatus.index}:hiddenId1").value);
+        	var dataArray = JSON.parse(document.getElementById("j_idt4:j_idt21:#{myVarStatus.index}:hiddenId1").value);
         	
-
-
     svg.selectAll("rect")
     .data(dataArray)
     .enter().append("rect")
@@ -104,7 +116,8 @@ var svg = d3.select("body").append("svg")
           .style("stroke", "black")
         .style("fill", function(d){ if(d.value &lt; 75) return "#FF0033"; if (d.value &lt; 90) return "#FFFF55"; return "#99FF33";} )
         .append('title')
-  		.text(function(d) {return d.title; });
+  		.text(function(d) {return d.title; })
+  		.style("color", "black");
    
 
 svg.selectAll("text")
@@ -114,8 +127,19 @@ svg.selectAll("text")
           .attr("x", function(d, i) {return (i * 60) + 30})
           .attr("y", function(d, i) {return 190 - d.value});
     
-
-        	
+    var label = svg.append('text')
+        .text("#{Repo.orderedPeople.get(myVarStatus.index)}")
+        .attr("x", 25)
+        .attr("y", 50)
+        .style("color", "#2F4F4F")
+        .style("font-size", "20px")
+        .style("font-family", "Verdana, Arial, Helvetica, sans-serif"); 
+ 
+        
+    if (#{myVarStatus.index} == 0) {
+   		document.getElementById('j_idt4:j_idt21:#{myVarStatus.index}:txt2').style["visibility"] = "visible";
+	}
+       	
         </h:outputScript>
 </ui:repeat>
 		

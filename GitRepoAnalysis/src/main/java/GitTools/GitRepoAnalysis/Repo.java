@@ -66,6 +66,7 @@ public class Repo {
 	public List<String> folderNames = new ArrayList<String>();
 	public List<PersonKnowsIn> peopleKnowing;
 	public List<String> dataForEachPerson;
+	public List<String> orderedPeople = new ArrayList<String>();
 	public File repository;
 	public String resultData = "";
 	
@@ -233,6 +234,7 @@ public class Repo {
     		if(!pki.isEmpty())
     		{
     			dataForEachPerson.add(personKnowlegeListToString(pki));
+    			orderedPeople.add(person);
     		}
     	}
 	}
@@ -245,7 +247,7 @@ public class Repo {
 		
 		for(PersonKnowsIn p : pki)
 		{
-			sb.append("{\"title\": \"" + p.getPerson() + " knows " + p.getPercent() + "% of " + p.getPath().replace(FOLDER_FOR_SAVING + "/", "") + "\", \"value\": " + p.getPercent() + "},");
+			sb.append("{\"title\": \"" + p.getPerson() + " знает " + p.getPercent() + "% в " + p.getPath().replace(FOLDER_FOR_SAVING + "/", "") + "\", \"value\": " + p.getPercent() + "},");
 		}
 		sb.deleteCharAt(sb.length() - 1);
 		sb.append("]");
@@ -260,7 +262,7 @@ public class Repo {
 			    		     .lastIndexOf("/")+1);
 		String data = "{\"name\":\""
 				    + name
-				    + ", known by " + Integer.toString(DBUtils.selectFolderPeopleByPathAndRepo(repository.getAbsolutePath().replace("\\", "/"), link)) + "\""
+				    + ", людей знают: " + Integer.toString(DBUtils.selectFolderPeopleByPathAndRepo(repository.getAbsolutePath().replace("\\", "/"), link)) + "\""
 				    + ", \"children\":[" + getChildrenData(repository.getAbsolutePath().replace("\\", "/") )+ "]}" ;
 		
 		return data;
@@ -273,7 +275,7 @@ public class Repo {
 		
 		for (RepoMember rm : children)
 		{
-			String name = rm.path.substring(rm.path.lastIndexOf("/") + 1) + ", known by " + Integer.toString(rm.peopleKnows);
+			String name = rm.path.substring(rm.path.lastIndexOf("/") + 1) + ", людей знают: " + Integer.toString(rm.peopleKnows);
 			sb.append(",{\"name\":\"" + name  + "\",");
 			if(rm.isFolder)
 			{

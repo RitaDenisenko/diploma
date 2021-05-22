@@ -1,6 +1,7 @@
 GitTools\GitRepoAnalysis\RepoMember.class
+GitTools\GitRepoAnalysis\RepoValidator.class
 GitTools\GitRepoAnalysis\App.class
 GitTools\GitRepoAnalysis\PersonKnowsIn.class
 GitTools\GitRepoAnalysis\Repo.class
-GitTools\GitRepoAnalysis\GitRepository.class
 GitTools\GitRepoAnalysis\DBUtils.class
+GitTools\GitRepoAnalysis\GitRepository.class
