@@ -11,9 +11,12 @@
   <body style="color: #F0F8FF">
   <script src="https://d3js.org/d3.v3.min.js"></script>
   <h:form>
-  		<h:graphicImage  style="width: 250; height: auto; display: block; margin: 0 auto;" title="Фактор автобуса (bus factor) – мера сосредоточения информации среди отдельных членов проекта"
+  		<h:graphicImage  style="width: 20px; float: right;" title="Приложение собирает статистику из гит репозитория проекта, анализирует собранные данные и на их основе строит графики, отражающие «фактор автобуса» (bus factor) этого проекта, то есть меру сосредоточения знаний о проекте среди отдельных его участников. Если участник проекта, обладающий уникальными знаниями о части проекта, &laquo;попадёт под автобус&raquo;(уедет в отпуск, заболеет, увоится и т.д.), у остальных участников могут возникнуть большие сложности с этой частью проекта. Поэтому важно заранее знать, какие части проекта могут оказаться под угрозой, чтобы предупредить возникновение подобной ситуации"
+   value = "https://image.flaticon.com/icons/png/512/18/18436.png"/> 
+		
+  		<h:graphicImage  style="width: 250px; display: block; margin: 0 auto;" title="Фактор автобуса (bus factor) – мера сосредоточения информации среди отдельных членов проекта"
    value = "https://lh3.googleusercontent.com/proxy/9DQWkVaR-iap6pob-TqXpN3mbUGFQ0_uUDZ8jamwx7uLS7SkdvMZJzLaxlDFF1kMjtP-SXlYeQIkbbqoXy_tWDhBzaYcHXfCDl3H4RL8kOxUz5oOEaNF51MNlqeoJw"/> 
-		<h3 style="font-weight: bold; font-size: 30px; font-family: Verdana, Arial, Helvetica, sans-serif; color: #2F4F4F; text-align: center;">Анализ &laquo;фактора автобуса&raquo;<br/>на основе гит репозитория</h3>
+  		<h3 style="font-weight: bold; font-size: 30px; font-family: Verdana, Arial, Helvetica, sans-serif; color: #2F4F4F; text-align: center;">Анализ &laquo;фактора автобуса&raquo;<br/>на основе гит репозитория</h3>
 		<br/>
 		<h:panelGrid columns="2" border="0">
         	<h:outputText  style="font-family: Verdana, Arial, Helvetica, sans-serif;  font-weight: bold; font-size: 18px; color: #2F4F4F;" value="Введите ссылку на гит репозиторий"/> <br/>
@@ -29,13 +32,12 @@
         <br/>
 		<br/>
 		<br/>
-           <h:outputText id="txt" style="visibility: hidden; font-family: Verdana, Arial, Helvetica, sans-serif; color: #2F4F4F; font-size: 16px;" value="Вложенные друг в друга прямоугольники обозначают файлы и папки проекта"/>	
+           <h:outputText id="txt" style="visibility: hidden; font-family: Verdana, Arial, Helvetica, sans-serif; color: #2F4F4F; font-size: 16px;" value="Вложенные друг в друга прямоугольники обозначают файлы и папки проекта (наведите курсор на элемент графика, чтобы узнать больше)"/>	
            <ul id="list" type="square" style="visibility: hidden; font-size: 16px;">
      			<li style="color: #FF0033; font-size: 16px;"><span style="color: black; font-family: Verdana, Arial, Helvetica, sans-serif; color: #2F4F4F; font-size: 14px;"> – 0 людей знают</span></li>
      			<li style="color: #FFFF55; font-size: 16px;"><span style="color: black; font-family: Verdana, Arial, Helvetica, sans-serif; color: #2F4F4F; font-size: 14px;"> – 1 человек знает</span></li>
      			<li style="color: #99FF33; font-size: 16px;"><span style="color: black; font-family: Verdana, Arial, Helvetica, sans-serif; color: #2F4F4F; font-size: 14px;"> – 2 или более людей знают</span></li>
    		  </ul>
-   		  <h:outputText id="txt1" style="visibility: hidden; font-family: Verdana, Arial, Helvetica, sans-serif; color: #2F4F4F; font-size: 14px;" value="Наведите курсор на элемент графика, чтобы узнать больше"/>	
 
        
 		 <h:outputScript>
@@ -46,7 +48,7 @@ var svg, group;
 var JSONItems = JSON.parse(document.getElementById("j_idt4:hiddenId").value);
 
 (function(){
-  svg = d3.select('body').append('svg').attr('width', window.innerWidth).attr('height',window.innerHeight);
+  svg = d3.select('body').append('svg').attr('width', window.innerWidth).attr('height',window.innerHeight).style("margin-top", "0px");
   group = svg.append('g');
   createTreemap(JSONItems);
 })();
@@ -58,7 +60,7 @@ function createTreemap(JSONItems) {
 
 var treemapLayout = d3.treemap()
   .size([1200, 600])
-  .paddingOuter(5);;
+  .paddingOuter(25);;
 
 var root = d3.hierarchy(JSONItems);
 
@@ -77,6 +79,7 @@ d3.select('svg g')
   .attr('y', function(d) { return d.y0; })
   .attr('width', function(d) { return d.x1 - d.x0; })
   .attr('height', function(d) { return d.y1 - d.y0; })
+  .style("margin-top", "0px")
   .style("stroke", "black")
   .style("fill", function(d){ if(d.data.name.slice(-1) == 0) return "#FF0033"; if (d.data.name.slice(-1) == 1) return "#FFFF55"; return "#99FF33";} )
   .append('title')
@@ -87,14 +90,16 @@ d3.select('svg g')
 
 document.getElementById('list').style["visibility"] = "visible";
 document.getElementById('j_idt4:txt').style["visibility"] = "visible";
-document.getElementById('j_idt4:txt1').style["visibility"] = "visible";
 		</h:outputScript>
 		
 		<ui:repeat value="#{Repo.dataForEachPerson}" var="personData" varStatus="myVarStatus">
     	
     	<h:inputHidden value="#{personData}" id="hiddenId1"/>
+    	<h:outputText id="txt1" style=" position: relative; top: 30px; visibility: hidden; font-family: Verdana, Arial, Helvetica, sans-serif; color: #2F4F4F; font-size: 16px;" value="Под иерархическим графиком представлены более подробные сведения о проблемных папках и файлах"/>
     	<br/>
-    	<h:outputText id="txt2" style=" text-align: center; position: relative; top: 800px; visibility: hidden; font-family: Verdana, Arial, Helvetica, sans-serif; color: #2F4F4F; font-size: 16px;" value="Следующие участники обладают уникальными знаниями (наведите курсор на столбец, чтобы узнать больше)"/>
+    	<h:outputText id="txt2" style=" position: relative; top: 60px; visibility: hidden; font-family: Verdana, Arial, Helvetica, sans-serif; color: #2F4F4F; font-size: 16px;" value="Если сведения не представлены, значит в репозитории нет файлов и папок, знаниями о которых обладает только один человек"/>
+    	<br/>
+    	<h:outputText id="txt3" style=" position: relative; top: 900px; visibility: hidden; font-family: Verdana, Arial, Helvetica, sans-serif; color: #2F4F4F; font-size: 16px;" value="Следующие участники обладают уникальными знаниями (наведите курсор на столбец, чтобы узнать больше)"/>
     	<br/>
     	
     	<h:outputScript>
@@ -103,7 +108,7 @@ var svg = d3.select("body").append("svg")
           .attr("height","200")
           .attr("width","100%");
         	
-        	var dataArray = JSON.parse(document.getElementById("j_idt4:j_idt21:#{myVarStatus.index}:hiddenId1").value);
+        	var dataArray = JSON.parse(document.getElementById("j_idt4:j_idt22:#{myVarStatus.index}:hiddenId1").value);
         	
     svg.selectAll("rect")
     .data(dataArray)
@@ -137,7 +142,15 @@ svg.selectAll("text")
  
         
     if (#{myVarStatus.index} == 0) {
-   		document.getElementById('j_idt4:j_idt21:#{myVarStatus.index}:txt2').style["visibility"] = "visible";
+   		document.getElementById('j_idt4:j_idt22:#{myVarStatus.index}:txt1').style["visibility"] = "visible";
+   		document.getElementById('j_idt4:j_idt22:#{myVarStatus.index}:txt2').style["visibility"] = "visible";
+   		document.getElementById('j_idt4:j_idt22:#{myVarStatus.index}:txt3').style["visibility"] = "visible";
+	}
+	else
+	{
+	   	document.getElementById('j_idt4:j_idt22:#{myVarStatus.index}:txt1').style["top"] = "2000px";
+   		document.getElementById('j_idt4:j_idt22:#{myVarStatus.index}:txt2').style["top"] = "2000px";
+   		document.getElementById('j_idt4:j_idt22:#{myVarStatus.index}:txt2').style["top"] = "2000px";
 	}
        	
         </h:outputScript>
